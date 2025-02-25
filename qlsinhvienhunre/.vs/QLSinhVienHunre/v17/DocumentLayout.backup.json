@@ -1,10 +1,34 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Workspace\\LT-Ngon-Ngu\\C#\\qlsinhvienhunre\\",
+  "WorkspaceRootPath": "D:\\Workspace\\KhoaLuanTotNghiep\\QuanLySinhVien\\qlsinhvienhunre\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{70F9D9D7-09B3-4BBD-93B0-2FDF61D6A752}|QLSinhVienHunre.csproj|d:\\workspace\\lt-ngon-ngu\\c#\\qlsinhvienhunre\\menusinhvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{70F9D9D7-09B3-4BBD-93B0-2FDF61D6A752}|QLSinhVienHunre.csproj|d:\\workspace\\khoaluantotnghiep\\quanlysinhvien\\qlsinhvienhunre\\menusinhvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{70F9D9D7-09B3-4BBD-93B0-2FDF61D6A752}|QLSinhVienHunre.csproj|solutionrelative:menusinhvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70F9D9D7-09B3-4BBD-93B0-2FDF61D6A752}|QLSinhVienHunre.csproj|d:\\workspace\\khoaluantotnghiep\\quanlysinhvien\\qlsinhvienhunre\\menuadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{70F9D9D7-09B3-4BBD-93B0-2FDF61D6A752}|QLSinhVienHunre.csproj|solutionrelative:menuadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70F9D9D7-09B3-4BBD-93B0-2FDF61D6A752}|QLSinhVienHunre.csproj|d:\\workspace\\khoaluantotnghiep\\quanlysinhvien\\qlsinhvienhunre\\menuadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{70F9D9D7-09B3-4BBD-93B0-2FDF61D6A752}|QLSinhVienHunre.csproj|solutionrelative:menuadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70F9D9D7-09B3-4BBD-93B0-2FDF61D6A752}|QLSinhVienHunre.csproj|d:\\workspace\\khoaluantotnghiep\\quanlysinhvien\\qlsinhvienhunre\\menusinhvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{70F9D9D7-09B3-4BBD-93B0-2FDF61D6A752}|QLSinhVienHunre.csproj|solutionrelative:menusinhvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70F9D9D7-09B3-4BBD-93B0-2FDF61D6A752}|QLSinhVienHunre.csproj|d:\\workspace\\khoaluantotnghiep\\quanlysinhvien\\qlsinhvienhunre\\menuadmin.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{70F9D9D7-09B3-4BBD-93B0-2FDF61D6A752}|QLSinhVienHunre.csproj|solutionrelative:menuadmin.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70F9D9D7-09B3-4BBD-93B0-2FDF61D6A752}|QLSinhVienHunre.csproj|d:\\workspace\\khoaluantotnghiep\\quanlysinhvien\\qlsinhvienhunre\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{70F9D9D7-09B3-4BBD-93B0-2FDF61D6A752}|QLSinhVienHunre.csproj|solutionrelative:loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70F9D9D7-09B3-4BBD-93B0-2FDF61D6A752}|QLSinhVienHunre.csproj|d:\\workspace\\khoaluantotnghiep\\quanlysinhvien\\qlsinhvienhunre\\demoform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{70F9D9D7-09B3-4BBD-93B0-2FDF61D6A752}|QLSinhVienHunre.csproj|solutionrelative:demoform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,15 +38,90 @@
       "DocumentGroups": [
         {
           "DockedWidth": 199,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 6,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "LoginForm.cs [Design]",
+              "DocumentMoniker": "D:\\Workspace\\KhoaLuanTotNghiep\\QuanLySinhVien\\qlsinhvienhunre\\LoginForm.cs",
+              "RelativeDocumentMoniker": "LoginForm.cs",
+              "ToolTip": "D:\\Workspace\\KhoaLuanTotNghiep\\QuanLySinhVien\\qlsinhvienhunre\\LoginForm.cs [Design]",
+              "RelativeToolTip": "LoginForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-25T14:45:21.011Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "DemoForm.cs [Design]",
+              "DocumentMoniker": "D:\\Workspace\\KhoaLuanTotNghiep\\QuanLySinhVien\\qlsinhvienhunre\\DemoForm.cs",
+              "RelativeDocumentMoniker": "DemoForm.cs",
+              "ToolTip": "D:\\Workspace\\KhoaLuanTotNghiep\\QuanLySinhVien\\qlsinhvienhunre\\DemoForm.cs [Design]",
+              "RelativeToolTip": "DemoForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-25T11:38:57.967Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MenuADMIN.Designer.cs",
+              "DocumentMoniker": "D:\\Workspace\\KhoaLuanTotNghiep\\QuanLySinhVien\\qlsinhvienhunre\\MenuADMIN.Designer.cs",
+              "RelativeDocumentMoniker": "MenuADMIN.Designer.cs",
+              "ToolTip": "D:\\Workspace\\KhoaLuanTotNghiep\\QuanLySinhVien\\qlsinhvienhunre\\MenuADMIN.Designer.cs",
+              "RelativeToolTip": "MenuADMIN.Designer.cs",
+              "ViewState": "AgIAAIUBAAAAAAAAAAAAAK4BAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-25T11:13:16.128Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MenuADMIN.cs",
+              "DocumentMoniker": "D:\\Workspace\\KhoaLuanTotNghiep\\QuanLySinhVien\\qlsinhvienhunre\\MenuADMIN.cs",
+              "RelativeDocumentMoniker": "MenuADMIN.cs",
+              "ToolTip": "D:\\Workspace\\KhoaLuanTotNghiep\\QuanLySinhVien\\qlsinhvienhunre\\MenuADMIN.cs",
+              "RelativeToolTip": "MenuADMIN.cs",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAIwB0AAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-25T11:13:12.423Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MenuSinhVien.cs",
+              "DocumentMoniker": "D:\\Workspace\\KhoaLuanTotNghiep\\QuanLySinhVien\\qlsinhvienhunre\\MenuSinhVien.cs",
+              "RelativeDocumentMoniker": "MenuSinhVien.cs",
+              "ToolTip": "D:\\Workspace\\KhoaLuanTotNghiep\\QuanLySinhVien\\qlsinhvienhunre\\MenuSinhVien.cs",
+              "RelativeToolTip": "MenuSinhVien.cs",
+              "ViewState": "AgIAAEAAAAAAAAAAAAAcwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-25T11:13:28.668Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MenuADMIN.cs [Design]",
+              "DocumentMoniker": "D:\\Workspace\\KhoaLuanTotNghiep\\QuanLySinhVien\\qlsinhvienhunre\\MenuADMIN.cs",
+              "RelativeDocumentMoniker": "MenuADMIN.cs",
+              "ToolTip": "D:\\Workspace\\KhoaLuanTotNghiep\\QuanLySinhVien\\qlsinhvienhunre\\MenuADMIN.cs [Design]",
+              "RelativeToolTip": "MenuADMIN.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-25T11:13:01.159Z",
+              "EditorCaption": " [Design]"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "MenuSinhVien.cs [Design]",
-              "DocumentMoniker": "D:\\Workspace\\LT-Ngon-Ngu\\C#\\qlsinhvienhunre\\MenuSinhVien.cs",
+              "DocumentMoniker": "D:\\Workspace\\KhoaLuanTotNghiep\\QuanLySinhVien\\qlsinhvienhunre\\MenuSinhVien.cs",
               "RelativeDocumentMoniker": "MenuSinhVien.cs",
-              "ToolTip": "D:\\Workspace\\LT-Ngon-Ngu\\C#\\qlsinhvienhunre\\MenuSinhVien.cs [Design]",
+              "ToolTip": "D:\\Workspace\\KhoaLuanTotNghiep\\QuanLySinhVien\\qlsinhvienhunre\\MenuSinhVien.cs [Design]",
               "RelativeToolTip": "MenuSinhVien.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-23T04:45:57.306Z",

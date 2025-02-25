@@ -20,6 +20,7 @@ namespace QLSinhVienHunre
         {
             InitializeComponent();
             RoundPanel(panel3);
+            RoundPanel(pnDangXuat);
         }
 
         #region methods
@@ -80,7 +81,14 @@ namespace QLSinhVienHunre
                 }
                 //thu nho sidebar
                 sidebar.Width -= 16;
-                if(sidebar.Width == sidebar.MinimumSize.Width)
+                pnNganhHoc.Width = sidebar.Width;
+                pnLopHocPhan.Width = sidebar.Width;
+                pnMonHoc.Width = sidebar.Width;
+                pnLop.Width = sidebar.Width;
+                pnGiangVien.Width = sidebar.Width;
+                pnSinhVien.Width = sidebar.Width;
+                pnTaiKhoan.Width = sidebar.Width;
+                if (sidebar.Width == sidebar.MinimumSize.Width)
                 {
                     sidebarExpand = false;
                     sidebartimer.Stop();
@@ -97,6 +105,13 @@ namespace QLSinhVienHunre
                 }
                 //phóng to sidebar
                 sidebar.Width += 16;
+                pnNganhHoc.Width = sidebar.Width;
+                pnLopHocPhan.Width = sidebar.Width;
+                pnMonHoc.Width = sidebar.Width;
+                pnLop.Width = sidebar.Width;
+                pnGiangVien.Width = sidebar.Width;
+                pnSinhVien.Width = sidebar.Width;
+                pnTaiKhoan.Width = sidebar.Width;
                 if (sidebar.Width == sidebar.MaximumSize.Width)
                 {
                     sidebarExpand = true;
@@ -105,23 +120,23 @@ namespace QLSinhVienHunre
             }
         }
 
-        private void ActiveButton(object btnSender)
-        {
-            if(btnSender != null)
-            {
-                DisableButton();
-                if(btnCurrent != (Button)btnSender)                
-                    btnCurrent.BackColor = Color.FromArgb(199,211,244);
-            }
-        }
-        private void DisableButton()
-        {
-            foreach (Control previousButton in sidebar.Controls)
-            {
-                if(previousButton.GetType() == typeof(Button))
-                    btnCurrent.BackColor = Color.FromArgb(40, 58, 116);
-            }
-        }
+        //private void ActiveButton(object btnSender)
+        //{
+        //    if(btnSender != null)
+        //    {
+        //        DisableButton();
+        //        if(btnCurrent != (Button)btnSender)                
+        //            btnCurrent.BackColor = Color.FromArgb(199,211,244);
+        //    }
+        //}
+        //private void DisableButton()
+        //{
+        //    foreach (Control previousButton in sidebar.Controls)
+        //    {
+        //        if(previousButton.GetType() == typeof(Button))
+        //            btnCurrent.BackColor = Color.FromArgb(40, 58, 116);
+        //    }
+        //}
         #endregion
 
         #region events

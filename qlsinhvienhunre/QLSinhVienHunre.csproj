@@ -115,6 +115,12 @@
     <Compile Include="ChiaMonForm.Designer.cs">
       <DependentUpon>ChiaMonForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="DemoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DemoForm.Designer.cs">
+      <DependentUpon>DemoForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="GiangVien.cs">
       <DependentUpon>ModelQLSVH.tt</DependentUpon>
     </Compile>
@@ -262,6 +268,9 @@
     </Compile>
     <EmbeddedResource Include="ChiaMonForm.resx">
       <DependentUpon>ChiaMonForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DemoForm.resx">
+      <DependentUpon>DemoForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GiangVienForm.resx">
       <DependentUpon>GiangVienForm.cs</DependentUpon>
