@@ -1,4 +1,5 @@
-﻿using System.Drawing.Drawing2D;
+﻿using quanlisinhvienHUNRE;
+using System.Drawing.Drawing2D;
 
 namespace QLSinhVienHunre
 {
@@ -34,8 +35,8 @@ namespace QLSinhVienHunre
             this.pnMenu = new System.Windows.Forms.Panel();
             this.iconMenu = new System.Windows.Forms.PictureBox();
             this.logoHunre = new System.Windows.Forms.PictureBox();
-            this.buttonDangXuat = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.btDangXuat = new System.Windows.Forms.Button();
+            this.pnMain = new System.Windows.Forms.Panel();
             this.sidebar = new System.Windows.Forms.FlowLayoutPanel();
             this.pnNganhHoc = new System.Windows.Forms.Panel();
             this.btNganhHoc = new System.Windows.Forms.Button();
@@ -106,34 +107,34 @@ namespace QLSinhVienHunre
             this.logoHunre.TabIndex = 7;
             this.logoHunre.TabStop = false;
             // 
-            // buttonDangXuat
+            // btDangXuat
             // 
-            this.buttonDangXuat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonDangXuat.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.buttonDangXuat.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonDangXuat.ForeColor = System.Drawing.Color.Transparent;
-            this.buttonDangXuat.Location = new System.Drawing.Point(0, 0);
-            this.buttonDangXuat.Margin = new System.Windows.Forms.Padding(2);
-            this.buttonDangXuat.Name = "buttonDangXuat";
-            this.buttonDangXuat.Size = new System.Drawing.Size(189, 39);
-            this.buttonDangXuat.TabIndex = 2;
-            this.buttonDangXuat.Text = "ĐĂNG XUẤT";
-            this.buttonDangXuat.UseVisualStyleBackColor = false;
-            this.buttonDangXuat.Click += new System.EventHandler(this.buttonDangXuat_Click);
+            this.btDangXuat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btDangXuat.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btDangXuat.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btDangXuat.ForeColor = System.Drawing.Color.Transparent;
+            this.btDangXuat.Location = new System.Drawing.Point(-12, -3);
+            this.btDangXuat.Margin = new System.Windows.Forms.Padding(2);
+            this.btDangXuat.Name = "btDangXuat";
+            this.btDangXuat.Size = new System.Drawing.Size(211, 47);
+            this.btDangXuat.TabIndex = 2;
+            this.btDangXuat.Text = "Đăng xuất";
+            this.btDangXuat.UseVisualStyleBackColor = false;
+            this.btDangXuat.Click += new System.EventHandler(this.btDangXuat_Click);
             // 
-            // panel3
+            // pnMain
             // 
-            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.pnMain.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(211)))), ((int)(((byte)(244)))));
-            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Location = new System.Drawing.Point(68, 51);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(719, 425);
-            this.panel3.TabIndex = 6;
+            this.pnMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(211)))), ((int)(((byte)(244)))));
+            this.pnMain.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pnMain.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnMain.Location = new System.Drawing.Point(68, 51);
+            this.pnMain.Margin = new System.Windows.Forms.Padding(2);
+            this.pnMain.Name = "pnMain";
+            this.pnMain.Size = new System.Drawing.Size(719, 425);
+            this.pnMain.TabIndex = 6;
             // 
             // sidebar
             // 
@@ -182,7 +183,7 @@ namespace QLSinhVienHunre
             this.btNganhHoc.Text = "     Ngành học";
             this.btNganhHoc.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btNganhHoc.UseVisualStyleBackColor = false;
-            this.btNganhHoc.Click += new System.EventHandler(this.btNganhHoc_Click);
+            this.btNganhHoc.Click += new System.EventHandler(this.btChildForm_Click);
             // 
             // pnLopHocPhan
             // 
@@ -211,7 +212,7 @@ namespace QLSinhVienHunre
             this.btLopHocPhan.Text = "     Lớp học phần";
             this.btLopHocPhan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btLopHocPhan.UseVisualStyleBackColor = false;
-            this.btLopHocPhan.Click += new System.EventHandler(this.btLopHocPhan_Click);
+            this.btLopHocPhan.Click += new System.EventHandler(this.btChildForm_Click);
             // 
             // pnMonHoc
             // 
@@ -240,7 +241,7 @@ namespace QLSinhVienHunre
             this.btMonHoc.Text = "     Môn học";
             this.btMonHoc.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btMonHoc.UseVisualStyleBackColor = false;
-            this.btMonHoc.Click += new System.EventHandler(this.btMonHoc_Click);
+            this.btMonHoc.Click += new System.EventHandler(this.btChildForm_Click);
             // 
             // pnLop
             // 
@@ -269,7 +270,7 @@ namespace QLSinhVienHunre
             this.btLop.Text = "     Lớp";
             this.btLop.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btLop.UseVisualStyleBackColor = false;
-            this.btLop.Click += new System.EventHandler(this.btLop_Click);
+            this.btLop.Click += new System.EventHandler(this.btChildForm_Click);
             // 
             // pnGiangVien
             // 
@@ -298,7 +299,7 @@ namespace QLSinhVienHunre
             this.btGiangVien.Text = "     Giảng viên";
             this.btGiangVien.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btGiangVien.UseVisualStyleBackColor = false;
-            this.btGiangVien.Click += new System.EventHandler(this.btGiangVien_Click);
+            this.btGiangVien.Click += new System.EventHandler(this.btChildForm_Click);
             // 
             // pnSinhVien
             // 
@@ -328,7 +329,7 @@ namespace QLSinhVienHunre
             this.btSinhVien.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btSinhVien.UseVisualStyleBackColor = false;
             this.btSinhVien.UseWaitCursor = true;
-            this.btSinhVien.Click += new System.EventHandler(this.btSinhVien_Click);
+            this.btSinhVien.Click += new System.EventHandler(this.btChildForm_Click);
             // 
             // pnTaiKhoan
             // 
@@ -357,7 +358,6 @@ namespace QLSinhVienHunre
             this.btTaiKhoan.Text = "     Tài khoản";
             this.btTaiKhoan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btTaiKhoan.UseVisualStyleBackColor = false;
-            this.btTaiKhoan.Click += new System.EventHandler(this.btTaiKhoan_Click);
             // 
             // sidebartimer
             // 
@@ -366,7 +366,7 @@ namespace QLSinhVienHunre
             // 
             // pnDangXuat
             // 
-            this.pnDangXuat.Controls.Add(this.buttonDangXuat);
+            this.pnDangXuat.Controls.Add(this.btDangXuat);
             this.pnDangXuat.Location = new System.Drawing.Point(598, 7);
             this.pnDangXuat.Name = "pnDangXuat";
             this.pnDangXuat.Size = new System.Drawing.Size(189, 39);
@@ -382,7 +382,7 @@ namespace QLSinhVienHunre
             this.ClientSize = new System.Drawing.Size(798, 487);
             this.Controls.Add(this.pnDangXuat);
             this.Controls.Add(this.sidebar);
-            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.pnMain);
             this.DoubleBuffered = true;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MinimumSize = new System.Drawing.Size(814, 526);
@@ -407,10 +407,10 @@ namespace QLSinhVienHunre
         }
 
         #endregion
-        private System.Windows.Forms.Button buttonDangXuat;
+        private System.Windows.Forms.Button btDangXuat;
         private System.Windows.Forms.Panel pnMenu;
         private System.Windows.Forms.PictureBox logoHunre;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel pnMain;
         private System.Windows.Forms.PictureBox iconMenu;
         private System.Windows.Forms.FlowLayoutPanel sidebar;
         private System.Windows.Forms.Button btTaiKhoan;

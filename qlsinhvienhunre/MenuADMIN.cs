@@ -15,18 +15,33 @@ namespace QLSinhVienHunre
     public partial class MenuADMIN : Form
     {
         private Form currentFormChild;
+        public static bool dangxuat = false;
 
         public MenuADMIN()
         {
             InitializeComponent();
-            RoundPanel(panel3);
+            RoundPanel(pnMain);
             RoundPanel(pnDangXuat);
+            AssignButtonTag(btGiangVien, new GiangVienForm());
+            AssignButtonTag(btSinhVien, new SinhVienForm());
+            AssignButtonTag(btMonHoc, new MonHocForm());
+            AssignButtonTag(btNganhHoc, new NganhHocForm());
+            AssignButtonTag(btLopHocPhan, new LopHocPhanForm());
+            AssignButtonTag(btLop, new LopForm());
+            AssignButtonTag(btTaiKhoan, new TaiKhoanNguoiDung());
         }
 
         #region methods
 
-        Button btnCurrent;
+        //Button btnCurrent;
         bool sidebarExpand = false;
+
+        private void AssignButtonTag(Button button, Form form)
+        {
+            button.Tag = form;
+            button.Click += btChildForm_Click;
+        }
+
         private void RoundPanel(Panel panel)
         {
             // Kích thước của các góc tròn
@@ -49,24 +64,34 @@ namespace QLSinhVienHunre
         {
             if (currentFormChild != null)
             {
+                pnMain.Controls.Remove(currentFormChild);
                 currentFormChild.Close();
+            }
+            if (childForm.IsDisposed)
+            {
+                Type formType = childForm.GetType();
+                childForm = (Form)Activator.CreateInstance(formType);
             }
             currentFormChild = childForm;
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
             childForm.Dock = DockStyle.Fill;
-            panel3.Controls.Add(childForm);
+
+            pnMain.Controls.Add(childForm);
             childForm.Show();
         }
 
         private void Menu_FormClosing(object sender, FormClosingEventArgs e)
         {
-            DialogResult result = MessageBox.Show("Bạn có muốn đóng ứng dụng không?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-            if (result == DialogResult.No)
+            if (!dangxuat)
             {
-                e.Cancel = true; // Hủy sự kiện đóng form
-            }
+                DialogResult result = MessageBox.Show("Bạn có muốn đóng ứng dụng không?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (result == DialogResult.No)
+                {
+                    e.Cancel = true; // Hủy sự kiện đóng form
+                }
+            } 
         }
         private void sidebartimer_Tick(object sender, EventArgs e)
         {
@@ -119,91 +144,35 @@ namespace QLSinhVienHunre
                 }
             }
         }
-
-        //private void ActiveButton(object btnSender)
-        //{
-        //    if(btnSender != null)
-        //    {
-        //        DisableButton();
-        //        if(btnCurrent != (Button)btnSender)                
-        //            btnCurrent.BackColor = Color.FromArgb(199,211,244);
-        //    }
-        //}
-        //private void DisableButton()
-        //{
-        //    foreach (Control previousButton in sidebar.Controls)
-        //    {
-        //        if(previousButton.GetType() == typeof(Button))
-        //            btnCurrent.BackColor = Color.FromArgb(40, 58, 116);
-        //    }
-        //}
         #endregion
 
         #region events
-        private void btGiangVien_Click(object sender, EventArgs e)
+        private void btChildForm_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new GiangVienForm());
-/*            ActiveButton(sender);*/
+            if (sender is Button btn)
+            {
+                Form childForm = btn.Tag as Form;
+                if (childForm != null)
+                {
+                    OpenChildForm(childForm);
+                }
+            }
         }
 
-        private void buttonLopHocPhan_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new LopHocPhanForm());
-/*            ActiveButton(sender);*/
-        }
-
-        private void btTaiKhoan_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new TaiKhoanNguoiDung());
-/*            ActiveButton(sender);*/
-        }
-
-        private void btSinhVien_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new SinhVienForm());
-/*            ActiveButton(sender);*/
-        }
-
-        private void btMonHoc_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new MonHocForm());
-/*            ActiveButton(sender);*/
-        }
-
-        private void btNganhHoc_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new NganhHocForm());
-/*            ActiveButton(sender);*/
-        }
-
-        private void btLopHocPhan_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new LopHocPhanForm());
-/*            ActiveButton(sender);*/
-        }
-
-        private void btLop_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new LopForm());
-/*            ActiveButton(sender);*/
-        }
-
-        private void buttonDangXuat_Click(object sender, EventArgs e)
+        private void btDangXuat_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("Bạn có muốn đăng xuất không ?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (result == DialogResult.Yes)
             {
-                this.Hide();
-                LoginForm lg = new LoginForm();
-                lg.ShowDialog();
-                this.Close();
+                dangxuat = true;
+                Application.Restart();
             }
         }
 
         private void MenuADMIN_Resize(object sender, EventArgs e)
         {
-            RoundPanel(panel3);
+            RoundPanel(pnMain);
         }
 
         private void iconMenu_Click(object sender, EventArgs e)
@@ -212,5 +181,6 @@ namespace QLSinhVienHunre
         }
 
         #endregion
+
     }
 }

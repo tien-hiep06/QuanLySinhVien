@@ -8,6 +8,7 @@ using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Documents;
 using System.Windows.Forms;
 
 namespace QLSinhVienHunre
@@ -43,7 +44,11 @@ namespace QLSinhVienHunre
         }
         void CheckAcc()
         {
-            if (db.NguoiDung.Where(tk => tk.SinhVien.maSinhVien == tbUserName.Text && tk.matKhau == tbPassWord.Text).SingleOrDefault() != null)
+            if (tbPassWord == null || tbUserName == null)
+            {
+                MessageBox.Show("Vui lòng điền điền đẩy đủ thông tin");
+                tbPassWord.Clear();
+            }else if (db.NguoiDung.Where(tk => tk.SinhVien.maSinhVien == tbUserName.Text && tk.matKhau == tbPassWord.Text).SingleOrDefault() != null)
             {
                 MessageBox.Show("Đăng nhập thành công");
                 // Nếu thông tin đăng nhập chính xác, đóng form đăng nhập và mở form menu chính
@@ -70,16 +75,9 @@ namespace QLSinhVienHunre
                 menuADMIN.ShowDialog();
                 this.Close();
             }
-            else if (tbPassWord == null || tbUserName == null)
-            {
-                MessageBox.Show("Vui lòng điền điền đẩy đủ thông tin");
-                tbUserName.Clear();
-                tbPassWord.Clear();
-            }
             else
             {
                 MessageBox.Show("Tài khoản hoặc mật khẩu không chính xác");
-                tbUserName.Clear();
                 tbPassWord.Clear();
             }
         }
@@ -97,7 +95,52 @@ namespace QLSinhVienHunre
             tbPassWord.UseSystemPasswordChar = !tbPassWord.UseSystemPasswordChar;
         }
 
-        #endregion
 
+        private void tb_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                CheckAcc();
+            }
+        }
+
+
+        private void btChangeStyle_MouseEnter(object sender, EventArgs e)
+        {
+            if (sender is Button btn)
+            {
+                btn.Font = new Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));// Gạch chân chữ
+                btn.ForeColor = Color.DarkOrange; // Đổi màu khi di chuyển chuột vào
+            }
+        }
+
+        private void btChangeStyle_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (sender is Button btn)
+            {
+                btn.Font = new Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));// Gạch chân chữ
+                btn.ForeColor = Color.Wheat; // Đổi màu khi di chuyển chuột vào
+            }
+        }
+
+        private void btChangeStyle_MouseLeave(object sender, EventArgs e)
+        {
+            if (sender is Button btn)
+            {
+                btn.Font = new Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));// Gạch chân chữ
+                btn.ForeColor = Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(58)))), ((int)(((byte)(116)))));
+            }
+        }
+
+        private void btExit_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Bạn có muốn đóng ứng dụng không?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                this.Close(); // Hủy sự kiện đóng form
+            }
+        }
+        #endregion
     }
 }

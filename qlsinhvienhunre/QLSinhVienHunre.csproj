@@ -375,6 +375,9 @@
     <None Include="image\icon\personal-info.png" />
     <None Include="image\icon\show.png" />
     <None Include="image\icon\user.png" />
+    <None Include="image\icon\forgot.png" />
+    <None Include="image\icon\exit.png" />
+    <None Include="image\icon\question.png" />
     <Content Include="ModelQLSVH.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>ModelQLSVH.edmx</DependentUpon>
