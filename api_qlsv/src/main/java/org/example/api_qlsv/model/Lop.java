@@ -7,12 +7,12 @@ import lombok.Setter;
 @Getter
 @Setter
 @Entity
-@Table(name = "Lop", schema = "dbo")
+@Table(name = "LopService", schema = "dbo")
 public class Lop {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "idLop")
-    private Integer id;
+    private Long id;
 
     @Column(name = "maLop")
     private String maLop;

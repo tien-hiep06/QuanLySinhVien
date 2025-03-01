@@ -12,7 +12,7 @@ public class MonHoc {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "idMonHoc")
-    private Integer id;
+    private Long id;
 
     @Column(name = "maMonHoc", unique = true)
     private String maMonHoc;

@@ -12,7 +12,7 @@ public class LopHocPhan {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "idLopHocPhan")
-    private Integer id;
+    private Long id;
 
     @Column(name = "maLopHocPhan", unique = true)
     private String maLopHocPhan;
