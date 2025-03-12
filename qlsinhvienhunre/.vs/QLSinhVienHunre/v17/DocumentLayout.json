@@ -7,6 +7,10 @@
       "RelativeMoniker": "D:0:0:{70F9D9D7-09B3-4BBD-93B0-2FDF61D6A752}|QLSinhVienHunre.csproj|solutionrelative:menuadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{70F9D9D7-09B3-4BBD-93B0-2FDF61D6A752}|QLSinhVienHunre.csproj|D:\\Workspace\\KhoaLuanTotNghiep\\QuanLySinhVien\\qlsinhvienhunre\\giangvienform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{70F9D9D7-09B3-4BBD-93B0-2FDF61D6A752}|QLSinhVienHunre.csproj|solutionrelative:giangvienform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{70F9D9D7-09B3-4BBD-93B0-2FDF61D6A752}|QLSinhVienHunre.csproj|D:\\Workspace\\KhoaLuanTotNghiep\\QuanLySinhVien\\qlsinhvienhunre\\thongtinsinhvienform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{70F9D9D7-09B3-4BBD-93B0-2FDF61D6A752}|QLSinhVienHunre.csproj|solutionrelative:thongtinsinhvienform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
@@ -67,17 +71,17 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "ThongTinSinhVienForm.cs [Design]",
-              "DocumentMoniker": "D:\\Workspace\\KhoaLuanTotNghiep\\QuanLySinhVien\\qlsinhvienhunre\\ThongTinSinhVienForm.cs",
-              "RelativeDocumentMoniker": "ThongTinSinhVienForm.cs",
-              "ToolTip": "D:\\Workspace\\KhoaLuanTotNghiep\\QuanLySinhVien\\qlsinhvienhunre\\ThongTinSinhVienForm.cs [Design]",
-              "RelativeToolTip": "ThongTinSinhVienForm.cs [Design]",
+              "Title": "GiangVienForm.cs [Design]",
+              "DocumentMoniker": "D:\\Workspace\\KhoaLuanTotNghiep\\QuanLySinhVien\\qlsinhvienhunre\\GiangVienForm.cs",
+              "RelativeDocumentMoniker": "GiangVienForm.cs",
+              "ToolTip": "D:\\Workspace\\KhoaLuanTotNghiep\\QuanLySinhVien\\qlsinhvienhunre\\GiangVienForm.cs [Design]",
+              "RelativeToolTip": "GiangVienForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-27T10:35:18.414Z"
+              "WhenOpened": "2025-03-01T10:17:30.663Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "SinhVienForm.cs [Design]",
               "DocumentMoniker": "D:\\Workspace\\KhoaLuanTotNghiep\\QuanLySinhVien\\qlsinhvienhunre\\SinhVienForm.cs",
               "RelativeDocumentMoniker": "SinhVienForm.cs",
@@ -88,7 +92,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "TaiKhoanNguoiDung.cs [Design]",
               "DocumentMoniker": "D:\\Workspace\\KhoaLuanTotNghiep\\QuanLySinhVien\\qlsinhvienhunre\\TaiKhoanNguoiDung.cs",
               "RelativeDocumentMoniker": "TaiKhoanNguoiDung.cs",
@@ -99,7 +103,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "MenuSinhVien.cs [Design]",
               "DocumentMoniker": "D:\\Workspace\\KhoaLuanTotNghiep\\QuanLySinhVien\\qlsinhvienhunre\\MenuSinhVien.cs",
               "RelativeDocumentMoniker": "MenuSinhVien.cs",
@@ -110,7 +114,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "LoginForm.Designer.cs",
               "DocumentMoniker": "D:\\Workspace\\KhoaLuanTotNghiep\\QuanLySinhVien\\qlsinhvienhunre\\LoginForm.Designer.cs",
               "RelativeDocumentMoniker": "LoginForm.Designer.cs",
@@ -122,7 +126,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "LoginForm.cs",
               "DocumentMoniker": "D:\\Workspace\\KhoaLuanTotNghiep\\QuanLySinhVien\\qlsinhvienhunre\\LoginForm.cs",
               "RelativeDocumentMoniker": "LoginForm.cs",
@@ -146,7 +150,18 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 2,
+              "Title": "ThongTinSinhVienForm.cs [Design]",
+              "DocumentMoniker": "D:\\Workspace\\KhoaLuanTotNghiep\\QuanLySinhVien\\qlsinhvienhunre\\ThongTinSinhVienForm.cs",
+              "RelativeDocumentMoniker": "ThongTinSinhVienForm.cs",
+              "ToolTip": "D:\\Workspace\\KhoaLuanTotNghiep\\QuanLySinhVien\\qlsinhvienhunre\\ThongTinSinhVienForm.cs [Design]",
+              "RelativeToolTip": "ThongTinSinhVienForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-27T10:35:18.414Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "MenuSinhVien.Designer.cs",
               "DocumentMoniker": "D:\\Workspace\\KhoaLuanTotNghiep\\QuanLySinhVien\\qlsinhvienhunre\\MenuSinhVien.Designer.cs",
               "RelativeDocumentMoniker": "MenuSinhVien.Designer.cs",
@@ -158,7 +173,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "MenuADMIN.cs",
               "DocumentMoniker": "D:\\Workspace\\KhoaLuanTotNghiep\\QuanLySinhVien\\qlsinhvienhunre\\MenuADMIN.cs",
               "RelativeDocumentMoniker": "MenuADMIN.cs",
@@ -170,7 +185,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "MenuADMIN.Designer.cs",
               "DocumentMoniker": "D:\\Workspace\\KhoaLuanTotNghiep\\QuanLySinhVien\\qlsinhvienhunre\\MenuADMIN.Designer.cs",
               "RelativeDocumentMoniker": "MenuADMIN.Designer.cs",
@@ -182,7 +197,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "LoginForm.cs [Design]",
               "DocumentMoniker": "D:\\Workspace\\KhoaLuanTotNghiep\\QuanLySinhVien\\qlsinhvienhunre\\LoginForm.cs",
               "RelativeDocumentMoniker": "LoginForm.cs",
@@ -193,7 +208,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "DemoForm.cs [Design]",
               "DocumentMoniker": "D:\\Workspace\\KhoaLuanTotNghiep\\QuanLySinhVien\\qlsinhvienhunre\\DemoForm.cs",
               "RelativeDocumentMoniker": "DemoForm.cs",
@@ -204,7 +219,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "MenuSinhVien.cs",
               "DocumentMoniker": "D:\\Workspace\\KhoaLuanTotNghiep\\QuanLySinhVien\\qlsinhvienhunre\\MenuSinhVien.cs",
               "RelativeDocumentMoniker": "MenuSinhVien.cs",
