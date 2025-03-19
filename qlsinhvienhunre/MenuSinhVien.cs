@@ -123,7 +123,6 @@ namespace QLSinhVienHunre
 
         private void btKetQua_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new KetQuaSinhVien(idSV));
         }
 
         private void btDangXuat_Click(object sender, EventArgs e)

@@ -64,7 +64,7 @@
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.tbUserName);
             this.panel1.Controls.Add(this.tbPassWord);
-            this.panel1.Location = new System.Drawing.Point(175, 122);
+            this.panel1.Location = new System.Drawing.Point(167, 122);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(354, 371);
             this.panel1.TabIndex = 0;
@@ -216,11 +216,11 @@
             // 
             this.tbUserName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(236)))), ((int)(((byte)(250)))));
             this.tbUserName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbUserName.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbUserName.Location = new System.Drawing.Point(83, 130);
+            this.tbUserName.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbUserName.Location = new System.Drawing.Point(83, 128);
             this.tbUserName.Margin = new System.Windows.Forms.Padding(2);
             this.tbUserName.Name = "tbUserName";
-            this.tbUserName.Size = new System.Drawing.Size(222, 13);
+            this.tbUserName.Size = new System.Drawing.Size(222, 18);
             this.tbUserName.TabIndex = 30;
             this.tbUserName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_KeyPress);
             // 
@@ -228,11 +228,11 @@
             // 
             this.tbPassWord.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(236)))), ((int)(((byte)(250)))));
             this.tbPassWord.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbPassWord.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbPassWord.Location = new System.Drawing.Point(83, 171);
+            this.tbPassWord.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbPassWord.Location = new System.Drawing.Point(83, 169);
             this.tbPassWord.Margin = new System.Windows.Forms.Padding(2);
             this.tbPassWord.Name = "tbPassWord";
-            this.tbPassWord.Size = new System.Drawing.Size(193, 13);
+            this.tbPassWord.Size = new System.Drawing.Size(193, 18);
             this.tbPassWord.TabIndex = 31;
             this.tbPassWord.UseSystemPasswordChar = true;
             this.tbPassWord.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_KeyPress);
@@ -245,7 +245,7 @@
             this.pictureBox1.Image = global::QLSinhVienHunre.Properties.Resources.logologin;
             this.pictureBox1.Location = new System.Drawing.Point(159, 27);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(386, 52);
+            this.pictureBox1.Size = new System.Drawing.Size(370, 52);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;

@@ -65,10 +65,10 @@
             this.btDangXuat.BackColor = System.Drawing.Color.CornflowerBlue;
             this.btDangXuat.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btDangXuat.ForeColor = System.Drawing.Color.Transparent;
-            this.btDangXuat.Location = new System.Drawing.Point(0, 0);
+            this.btDangXuat.Location = new System.Drawing.Point(-8, -2);
             this.btDangXuat.Margin = new System.Windows.Forms.Padding(2);
             this.btDangXuat.Name = "btDangXuat";
-            this.btDangXuat.Size = new System.Drawing.Size(189, 39);
+            this.btDangXuat.Size = new System.Drawing.Size(206, 44);
             this.btDangXuat.TabIndex = 2;
             this.btDangXuat.Text = "Đăng xuất";
             this.btDangXuat.UseVisualStyleBackColor = false;

@@ -187,7 +187,6 @@ D:\Workspace\KhoaLuanTotNghiep\QuanLySinhVien\qlsinhvienhunre\obj\Debug\QLSinhVi
 D:\Workspace\KhoaLuanTotNghiep\QuanLySinhVien\qlsinhvienhunre\obj\Debug\QLSinhVienHunre.exe.config
 D:\Workspace\KhoaLuanTotNghiep\QuanLySinhVien\qlsinhvienhunre\obj\Debug\QLSinhVienHunre.ChiaMonForm.resources
 D:\Workspace\KhoaLuanTotNghiep\QuanLySinhVien\qlsinhvienhunre\obj\Debug\QLSinhVienHunre.GiangVienForm.resources
-D:\Workspace\KhoaLuanTotNghiep\QuanLySinhVien\qlsinhvienhunre\obj\Debug\QLSinhVienHunre.KetQuaSinhVien.resources
 D:\Workspace\KhoaLuanTotNghiep\QuanLySinhVien\qlsinhvienhunre\obj\Debug\QLSinhVienHunre.LopForm.resources
 D:\Workspace\KhoaLuanTotNghiep\QuanLySinhVien\qlsinhvienhunre\obj\Debug\QLSinhVienHunre.MenuSinhVien.resources
 D:\Workspace\KhoaLuanTotNghiep\QuanLySinhVien\qlsinhvienhunre\obj\Debug\QLSinhVienHunre.MonHocForm.resources
@@ -207,3 +206,4 @@ D:\Workspace\KhoaLuanTotNghiep\QuanLySinhVien\qlsinhvienhunre\obj\Debug\QLSinhVi
 D:\Workspace\KhoaLuanTotNghiep\QuanLySinhVien\qlsinhvienhunre\obj\Debug\QLSinhVienHunre.exe
 D:\Workspace\KhoaLuanTotNghiep\QuanLySinhVien\qlsinhvienhunre\obj\Debug\QLSinhVienHunre.pdb
 D:\Workspace\KhoaLuanTotNghiep\QuanLySinhVien\qlsinhvienhunre\obj\Debug\QLSinhVienHunre.DemoForm.resources
+D:\Workspace\KhoaLuanTotNghiep\QuanLySinhVien\qlsinhvienhunre\obj\Debug\QLSinhVienHunre.MenuGiangVien.resources

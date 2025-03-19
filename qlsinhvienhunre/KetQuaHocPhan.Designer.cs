@@ -162,7 +162,7 @@
             // 
             this.dGVSinhVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dGVSinhVien.Location = new System.Drawing.Point(5, 18);
-            this.dGVSinhVien.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dGVSinhVien.Margin = new System.Windows.Forms.Padding(2);
             this.dGVSinhVien.Name = "dGVSinhVien";
             this.dGVSinhVien.RowHeadersWidth = 51;
             this.dGVSinhVien.RowTemplate.Height = 24;
@@ -175,7 +175,7 @@
             this.button1.BackColor = System.Drawing.Color.Transparent;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button1.Location = new System.Drawing.Point(11, 12);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(25, 20);
             this.button1.TabIndex = 11;
@@ -184,7 +184,7 @@
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(41, 13);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(198, 20);
             this.textBox1.TabIndex = 10;
@@ -198,7 +198,8 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "KetQuaHocPhanForm";
             this.Text = "Tham gia học phần";
             this.groupBox1.ResumeLayout(false);

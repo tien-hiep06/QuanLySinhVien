@@ -271,6 +271,7 @@
             this.Controls.Add(this.gbChucNang);
             this.Controls.Add(this.gbDanhSach);
             this.Controls.Add(this.gbThongTin);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "GiangVienForm";
             this.Text = "GiangVienForm";

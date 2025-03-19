@@ -109,14 +109,14 @@ namespace QLSinhVienHunre
             // 
             // btDangXuat
             // 
-            this.btDangXuat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btDangXuat.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btDangXuat.BackColor = System.Drawing.Color.CornflowerBlue;
             this.btDangXuat.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btDangXuat.ForeColor = System.Drawing.Color.Transparent;
-            this.btDangXuat.Location = new System.Drawing.Point(-12, -3);
+            this.btDangXuat.Location = new System.Drawing.Point(-7, -4);
             this.btDangXuat.Margin = new System.Windows.Forms.Padding(2);
             this.btDangXuat.Name = "btDangXuat";
-            this.btDangXuat.Size = new System.Drawing.Size(211, 47);
+            this.btDangXuat.Size = new System.Drawing.Size(204, 47);
             this.btDangXuat.TabIndex = 2;
             this.btDangXuat.Text = "Đăng xuất";
             this.btDangXuat.UseVisualStyleBackColor = false;
@@ -366,6 +366,7 @@ namespace QLSinhVienHunre
             // 
             // pnDangXuat
             // 
+            this.pnDangXuat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pnDangXuat.Controls.Add(this.btDangXuat);
             this.pnDangXuat.Location = new System.Drawing.Point(598, 7);
             this.pnDangXuat.Name = "pnDangXuat";

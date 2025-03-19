@@ -19,23 +19,54 @@ namespace QLSinhVienHunre
             InitializeComponent();
             idSV = idSinhVien;
         }
-       void loadData()
+
+        void loadData()
         {
             String maSinhVien = db.SinhVien.Where(p => p.maSinhVien == idSV).Select(p => p.maSinhVien).SingleOrDefault();
-            tbMaSV.Text = maSinhVien;
+            lbMaSV.Text = maSinhVien;
             String hotenSinhVien = db.SinhVien.Where(p => p.maSinhVien == idSV).Select(p => p.hotenSinhVien).SingleOrDefault();
-            tbHoTen.Text = hotenSinhVien;
+            lbHoTen.Text = hotenSinhVien;
             String ngaysinh = db.SinhVien.Where(p => p.maSinhVien == idSV).Select(p => p.ngaySinh.Value.ToString()).SingleOrDefault();
-            tbNgaySinh.Text = ngaysinh;
+            lbNgaySinh.Text = ngaysinh;
             String gioitinh = db.SinhVien.Where(p => p.maSinhVien == idSV).Select(p => p.gioiTinh).SingleOrDefault();
-            tbGioiTinh.Text = gioitinh;
+            lbGioiTinh.Text = gioitinh;
             String lop = db.SinhVien.Where(p => p.maSinhVien == idSV).Select(p => p.Lop.maLop).SingleOrDefault();
-            tbLopHoc.Text = lop;
+            lbLopHoc.Text = lop;
             String nghanhhoc = db.SinhVien.Where(p => p.maSinhVien == idSV).Select(p => p.Lop.NganhHoc.tenNganhHoc).SingleOrDefault();
-            tbNganhHoc.Text = nghanhhoc;
+            lbNganhHoc.Text = nghanhhoc;
 
 
+
+            var result = from c in db.ThamGiaLopHoc
+                         where c.SinhVien.maSinhVien == idSV
+                         select new
+                         {
+                             maLopHocPhan = c.LopHocPhan.maLopHocPhan,
+                             tenMonHoc = c.LopHocPhan.MonHoc.tenMonHoc,
+                             soTinChi = c.LopHocPhan.MonHoc.soTinChi,
+                             hotenGiangVien = c.LopHocPhan.GiangVien.hotenGiangVien,
+                             hinhThucDanhGia = c.LopHocPhan.MonHoc.hinhThucDanhGia,
+                             diemSo = c.diemSo,
+                             diemChu = c.diemChu,
+                             moTa = c.LopHocPhan.moTa,
+                             maKetQua = c.maKetQua
+                         };
+
+            DGVKetQua.DataSource = result.ToList();
+
+            int tongSoTinChi = ((int)db.SinhVien.Where(p => p.maSinhVien == idSV).Select(p => p.Lop.NganhHoc.soTinChi).SingleOrDefault());
+            lbTongSoTin.Text = tongSoTinChi.ToString();
+
+            int tongSoTinChiDaTichLuy = (int)result.Where(p=>p.maKetQua == "Đạt").Sum(c => c.soTinChi);
+            lbTinChiTichLuy.Text = tongSoTinChiDaTichLuy.ToString();
+
+            float diemHe10 = ((float)result.Where(p => p.maKetQua == "Đạt").Sum(c => c.diemSo)) / ((float)result.Where(p => p.maKetQua == "Đạt").Count());
+            lbDiemHe10.Text = diemHe10.ToString();
+
+            float diemHe4 = diemHe10 / tongSoTinChiDaTichLuy;
+            lbDiemHe4.Text = diemHe4.ToString("F2");
         }
+
         SinhVien SelectData(String maSinhVien)
         {
             SinhVien sinhVien = db.SinhVien.Where(p => p.maSinhVien == idSV).SingleOrDefault();
@@ -43,50 +74,9 @@ namespace QLSinhVienHunre
         }
 
 
-        void EditData(String maSinhVien)
-        {
-            SinhVien sinhVien = db.SinhVien.Find(SelectData(maSinhVien).idSinhVien);
-       
-            if (sinhVien != null)
-            {
-       
-
-                sinhVien.hotenSinhVien = tbHoTen.Text;
-                DateTime ngaySinh;
-                if (DateTime.TryParse(tbNgaySinh.Text, out ngaySinh))
-                {
-                    sinhVien.ngaySinh = ngaySinh;
-                }
-                else
-                {
-                    MessageBox.Show("Ngày sinh không hợp lệ!");
-                    return;
-                }
-                sinhVien.gioiTinh = tbGioiTinh.Text;
-             
-                try
-                {
-                    db.SaveChanges();
-                    MessageBox.Show("Sửa thông tin sinh viên thành công!");
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Sửa thông tin sinh viên thất bại! Lỗi: " + ex.Message);
-                }
-            };
-        }
-
         private void ThôngTinSinhVienForm_Load(object sender, EventArgs e)
         {
-         loadData();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            EditData(tbMaSV.Text);
             loadData();
         }
-
- 
     }
 }

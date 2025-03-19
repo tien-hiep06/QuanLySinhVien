@@ -54,7 +54,8 @@ namespace QLSinhVienHunre
                              ngaySinh = c.SinhVien.ngaySinh,
                              tenMonHoc = c.LopHocPhan.MonHoc.tenMonHoc,
                              diemSo = c.diemSo,
-                             diemChu = c.diemChu
+                             diemChu = c.diemChu,
+                             maKetQua = c.maKetQua
                          };
             dGVSinhVien.DataSource = result.ToList();
 
