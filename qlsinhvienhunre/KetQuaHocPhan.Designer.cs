@@ -42,6 +42,10 @@
             this.dGVSinhVien = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.cbNamHoc = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.cbHocKy = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dGVSinhVien)).BeginInit();
@@ -150,23 +154,30 @@
             this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox2.Controls.Add(this.label6);
+            this.groupBox2.Controls.Add(this.cbHocKy);
+            this.groupBox2.Controls.Add(this.label5);
+            this.groupBox2.Controls.Add(this.cbNamHoc);
             this.groupBox2.Controls.Add(this.dGVSinhVien);
             this.groupBox2.Location = new System.Drawing.Point(245, 12);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(453, 479);
+            this.groupBox2.Size = new System.Drawing.Size(557, 531);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Danh sách sinh viên";
             // 
             // dGVSinhVien
             // 
+            this.dGVSinhVien.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dGVSinhVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dGVSinhVien.Location = new System.Drawing.Point(5, 18);
+            this.dGVSinhVien.Location = new System.Drawing.Point(5, 52);
             this.dGVSinhVien.Margin = new System.Windows.Forms.Padding(2);
             this.dGVSinhVien.Name = "dGVSinhVien";
             this.dGVSinhVien.RowHeadersWidth = 51;
             this.dGVSinhVien.RowTemplate.Height = 24;
-            this.dGVSinhVien.Size = new System.Drawing.Size(442, 456);
+            this.dGVSinhVien.Size = new System.Drawing.Size(546, 474);
             this.dGVSinhVien.TabIndex = 0;
             this.dGVSinhVien.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGVSinhVien_CellClick);
             // 
@@ -189,11 +200,55 @@
             this.textBox1.Size = new System.Drawing.Size(198, 20);
             this.textBox1.TabIndex = 10;
             // 
+            // cbNamHoc
+            // 
+            this.cbNamHoc.BackColor = System.Drawing.SystemColors.Window;
+            this.cbNamHoc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbNamHoc.FormattingEnabled = true;
+            this.cbNamHoc.Items.AddRange(new object[] {
+            "SV",
+            "GV"});
+            this.cbNamHoc.Location = new System.Drawing.Point(63, 19);
+            this.cbNamHoc.Name = "cbNamHoc";
+            this.cbNamHoc.Size = new System.Drawing.Size(121, 21);
+            this.cbNamHoc.TabIndex = 7;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(10, 22);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(50, 13);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "Năm học";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(200, 22);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(41, 13);
+            this.label6.TabIndex = 10;
+            this.label6.Text = "Học kỳ";
+            // 
+            // cbHocKy
+            // 
+            this.cbHocKy.BackColor = System.Drawing.SystemColors.Window;
+            this.cbHocKy.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbHocKy.FormattingEnabled = true;
+            this.cbHocKy.Items.AddRange(new object[] {
+            "SV",
+            "GV"});
+            this.cbHocKy.Location = new System.Drawing.Point(253, 19);
+            this.cbHocKy.Name = "cbHocKy";
+            this.cbHocKy.Size = new System.Drawing.Size(121, 21);
+            this.cbHocKy.TabIndex = 9;
+            // 
             // KetQuaHocPhanForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(710, 503);
+            this.ClientSize = new System.Drawing.Size(814, 555);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.groupBox2);
@@ -205,6 +260,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dGVSinhVien)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -227,5 +283,9 @@
         private System.Windows.Forms.DataGridView dGVSinhVien;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ComboBox cbNamHoc;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox cbHocKy;
     }
 }

@@ -20,6 +20,8 @@ namespace QLSinhVienHunre
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new LoginForm());
+            //Application.Run(new MenuSinhVien("SV2018"));
+            //Application.Run(new MenuADMIN());
         }
     }
 }

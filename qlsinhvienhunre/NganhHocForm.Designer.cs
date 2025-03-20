@@ -75,7 +75,7 @@
             this.dTPNam.CustomFormat = "yyyy";
             this.dTPNam.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dTPNam.Location = new System.Drawing.Point(117, 111);
-            this.dTPNam.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dTPNam.Margin = new System.Windows.Forms.Padding(2);
             this.dTPNam.Name = "dTPNam";
             this.dTPNam.Size = new System.Drawing.Size(69, 22);
             this.dTPNam.TabIndex = 7;
@@ -221,7 +221,7 @@
             this.dGVNganhHoc.Location = new System.Drawing.Point(6, 22);
             this.dGVNganhHoc.Name = "dGVNganhHoc";
             this.dGVNganhHoc.RowHeadersWidth = 51;
-            this.dGVNganhHoc.Size = new System.Drawing.Size(602, 347);
+            this.dGVNganhHoc.Size = new System.Drawing.Size(483, 503);
             this.dGVNganhHoc.TabIndex = 3;
             this.dGVNganhHoc.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGVNganhHoc_CellClick);
             // 
@@ -234,7 +234,7 @@
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.Location = new System.Drawing.Point(307, 12);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(614, 375);
+            this.groupBox3.Size = new System.Drawing.Size(495, 531);
             this.groupBox3.TabIndex = 4;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Danh sách";
@@ -243,7 +243,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(933, 399);
+            this.ClientSize = new System.Drawing.Size(814, 555);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);

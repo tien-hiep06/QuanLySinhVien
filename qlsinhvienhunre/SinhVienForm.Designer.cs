@@ -216,7 +216,7 @@
             this.gbDanhSach.Controls.Add(this.cbLop);
             this.gbDanhSach.Location = new System.Drawing.Point(271, 12);
             this.gbDanhSach.Name = "gbDanhSach";
-            this.gbDanhSach.Size = new System.Drawing.Size(505, 428);
+            this.gbDanhSach.Size = new System.Drawing.Size(531, 523);
             this.gbDanhSach.TabIndex = 1;
             this.gbDanhSach.TabStop = false;
             this.gbDanhSach.Text = "Danh sách sinh viên";
@@ -230,7 +230,7 @@
             this.dGVSinhVien.Location = new System.Drawing.Point(6, 49);
             this.dGVSinhVien.Name = "dGVSinhVien";
             this.dGVSinhVien.RowHeadersWidth = 82;
-            this.dGVSinhVien.Size = new System.Drawing.Size(493, 373);
+            this.dGVSinhVien.Size = new System.Drawing.Size(519, 468);
             this.dGVSinhVien.TabIndex = 0;
             this.dGVSinhVien.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGVSinhVien_CellClick);
             // 
@@ -292,7 +292,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(788, 460);
+            this.ClientSize = new System.Drawing.Size(814, 555);
             this.Controls.Add(this.gbChucNang);
             this.Controls.Add(this.gbDanhSach);
             this.Controls.Add(this.gbThongTin);

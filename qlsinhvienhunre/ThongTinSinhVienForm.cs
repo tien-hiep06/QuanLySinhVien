@@ -18,6 +18,7 @@ namespace QLSinhVienHunre
         {
             InitializeComponent();
             idSV = idSinhVien;
+            loadData();
         }
 
         void loadData()

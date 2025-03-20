@@ -133,7 +133,7 @@ namespace QLSinhVienHunre
             this.pnMain.Location = new System.Drawing.Point(68, 51);
             this.pnMain.Margin = new System.Windows.Forms.Padding(2);
             this.pnMain.Name = "pnMain";
-            this.pnMain.Size = new System.Drawing.Size(719, 425);
+            this.pnMain.Size = new System.Drawing.Size(814, 556);
             this.pnMain.TabIndex = 6;
             // 
             // sidebar
@@ -183,7 +183,6 @@ namespace QLSinhVienHunre
             this.btNganhHoc.Text = "     Ngành học";
             this.btNganhHoc.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btNganhHoc.UseVisualStyleBackColor = false;
-            this.btNganhHoc.Click += new System.EventHandler(this.btChildForm_Click);
             // 
             // pnLopHocPhan
             // 
@@ -212,7 +211,6 @@ namespace QLSinhVienHunre
             this.btLopHocPhan.Text = "     Lớp học phần";
             this.btLopHocPhan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btLopHocPhan.UseVisualStyleBackColor = false;
-            this.btLopHocPhan.Click += new System.EventHandler(this.btChildForm_Click);
             // 
             // pnMonHoc
             // 
@@ -241,7 +239,6 @@ namespace QLSinhVienHunre
             this.btMonHoc.Text = "     Môn học";
             this.btMonHoc.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btMonHoc.UseVisualStyleBackColor = false;
-            this.btMonHoc.Click += new System.EventHandler(this.btChildForm_Click);
             // 
             // pnLop
             // 
@@ -270,7 +267,6 @@ namespace QLSinhVienHunre
             this.btLop.Text = "     Lớp";
             this.btLop.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btLop.UseVisualStyleBackColor = false;
-            this.btLop.Click += new System.EventHandler(this.btChildForm_Click);
             // 
             // pnGiangVien
             // 
@@ -299,7 +295,6 @@ namespace QLSinhVienHunre
             this.btGiangVien.Text = "     Giảng viên";
             this.btGiangVien.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btGiangVien.UseVisualStyleBackColor = false;
-            this.btGiangVien.Click += new System.EventHandler(this.btChildForm_Click);
             // 
             // pnSinhVien
             // 
@@ -329,7 +324,6 @@ namespace QLSinhVienHunre
             this.btSinhVien.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btSinhVien.UseVisualStyleBackColor = false;
             this.btSinhVien.UseWaitCursor = true;
-            this.btSinhVien.Click += new System.EventHandler(this.btChildForm_Click);
             // 
             // pnTaiKhoan
             // 
@@ -368,7 +362,7 @@ namespace QLSinhVienHunre
             // 
             this.pnDangXuat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pnDangXuat.Controls.Add(this.btDangXuat);
-            this.pnDangXuat.Location = new System.Drawing.Point(598, 7);
+            this.pnDangXuat.Location = new System.Drawing.Point(693, 7);
             this.pnDangXuat.Name = "pnDangXuat";
             this.pnDangXuat.Size = new System.Drawing.Size(189, 39);
             this.pnDangXuat.TabIndex = 37;
@@ -380,13 +374,13 @@ namespace QLSinhVienHunre
             this.AutoScroll = true;
             this.BackgroundImage = global::QLSinhVienHunre.Properties.Resources.bg_login;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(798, 487);
+            this.ClientSize = new System.Drawing.Size(893, 618);
             this.Controls.Add(this.pnDangXuat);
             this.Controls.Add(this.sidebar);
             this.Controls.Add(this.pnMain);
             this.DoubleBuffered = true;
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.MinimumSize = new System.Drawing.Size(814, 526);
+            this.MinimumSize = new System.Drawing.Size(909, 657);
             this.Name = "MenuADMIN";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Menu_FormClosing);

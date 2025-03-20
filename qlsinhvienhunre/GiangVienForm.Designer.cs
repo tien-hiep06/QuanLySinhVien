@@ -172,7 +172,7 @@
             this.dGVGiangVien.Location = new System.Drawing.Point(6, 16);
             this.dGVGiangVien.Name = "dGVGiangVien";
             this.dGVGiangVien.RowHeadersWidth = 82;
-            this.dGVGiangVien.Size = new System.Drawing.Size(490, 334);
+            this.dGVGiangVien.Size = new System.Drawing.Size(524, 510);
             this.dGVGiangVien.TabIndex = 0;
             this.dGVGiangVien.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGVGiangVien_CellClick);
             // 
@@ -220,7 +220,7 @@
             this.gbDanhSach.Controls.Add(this.dGVGiangVien);
             this.gbDanhSach.Location = new System.Drawing.Point(266, 11);
             this.gbDanhSach.Name = "gbDanhSach";
-            this.gbDanhSach.Size = new System.Drawing.Size(502, 356);
+            this.gbDanhSach.Size = new System.Drawing.Size(536, 532);
             this.gbDanhSach.TabIndex = 5;
             this.gbDanhSach.TabStop = false;
             this.gbDanhSach.Text = "Danh sách giảng viên";
@@ -265,7 +265,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(780, 379);
+            this.ClientSize = new System.Drawing.Size(814, 555);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.gbChucNang);

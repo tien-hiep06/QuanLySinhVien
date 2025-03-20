@@ -35,40 +35,29 @@
             this.iconMenu = new System.Windows.Forms.PictureBox();
             this.logoHunre = new System.Windows.Forms.PictureBox();
             this.btTaiKhoan = new System.Windows.Forms.Button();
-            this.btSinhVien = new System.Windows.Forms.Button();
-            this.btGiangVien = new System.Windows.Forms.Button();
             this.btLop = new System.Windows.Forms.Button();
-            this.pnNganhHoc = new System.Windows.Forms.Panel();
-            this.btNganhHoc = new System.Windows.Forms.Button();
-            this.btMonHoc = new System.Windows.Forms.Button();
             this.pnLopHocPhan = new System.Windows.Forms.Panel();
             this.btLopHocPhan = new System.Windows.Forms.Button();
             this.sidebartimer = new System.Windows.Forms.Timer(this.components);
-            this.pnMonHoc = new System.Windows.Forms.Panel();
             this.pnLop = new System.Windows.Forms.Panel();
             this.pnMain = new System.Windows.Forms.Panel();
-            this.pnGiangVien = new System.Windows.Forms.Panel();
-            this.pnSinhVien = new System.Windows.Forms.Panel();
             this.pnTaiKhoan = new System.Windows.Forms.Panel();
             this.sidebar = new System.Windows.Forms.FlowLayoutPanel();
             this.pnDangXuat.SuspendLayout();
             this.pnMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.logoHunre)).BeginInit();
-            this.pnNganhHoc.SuspendLayout();
             this.pnLopHocPhan.SuspendLayout();
-            this.pnMonHoc.SuspendLayout();
             this.pnLop.SuspendLayout();
-            this.pnGiangVien.SuspendLayout();
-            this.pnSinhVien.SuspendLayout();
             this.pnTaiKhoan.SuspendLayout();
             this.sidebar.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnDangXuat
             // 
+            this.pnDangXuat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pnDangXuat.Controls.Add(this.btDangXuat);
-            this.pnDangXuat.Location = new System.Drawing.Point(599, 7);
+            this.pnDangXuat.Location = new System.Drawing.Point(693, 7);
             this.pnDangXuat.Name = "pnDangXuat";
             this.pnDangXuat.Size = new System.Drawing.Size(189, 39);
             this.pnDangXuat.TabIndex = 40;
@@ -145,47 +134,6 @@
             this.btTaiKhoan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btTaiKhoan.UseVisualStyleBackColor = false;
             // 
-            // btSinhVien
-            // 
-            this.btSinhVien.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(58)))), ((int)(((byte)(116)))));
-            this.btSinhVien.FlatAppearance.BorderSize = 0;
-            this.btSinhVien.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(201)))), ((int)(((byte)(243)))));
-            this.btSinhVien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btSinhVien.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.btSinhVien.ForeColor = System.Drawing.Color.Transparent;
-            this.btSinhVien.Image = global::QLSinhVienHunre.Properties.Resources.graduation;
-            this.btSinhVien.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btSinhVien.Location = new System.Drawing.Point(0, 0);
-            this.btSinhVien.Margin = new System.Windows.Forms.Padding(2);
-            this.btSinhVien.Name = "btSinhVien";
-            this.btSinhVien.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btSinhVien.Size = new System.Drawing.Size(189, 40);
-            this.btSinhVien.TabIndex = 38;
-            this.btSinhVien.Text = "     Sinh viên";
-            this.btSinhVien.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btSinhVien.UseVisualStyleBackColor = false;
-            this.btSinhVien.UseWaitCursor = true;
-            // 
-            // btGiangVien
-            // 
-            this.btGiangVien.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(58)))), ((int)(((byte)(116)))));
-            this.btGiangVien.FlatAppearance.BorderSize = 0;
-            this.btGiangVien.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(201)))), ((int)(((byte)(243)))));
-            this.btGiangVien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btGiangVien.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.btGiangVien.ForeColor = System.Drawing.Color.Transparent;
-            this.btGiangVien.Image = global::QLSinhVienHunre.Properties.Resources.blackboard;
-            this.btGiangVien.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btGiangVien.Location = new System.Drawing.Point(0, 0);
-            this.btGiangVien.Margin = new System.Windows.Forms.Padding(2);
-            this.btGiangVien.Name = "btGiangVien";
-            this.btGiangVien.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btGiangVien.Size = new System.Drawing.Size(189, 40);
-            this.btGiangVien.TabIndex = 37;
-            this.btGiangVien.Text = "     Giảng viên";
-            this.btGiangVien.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btGiangVien.UseVisualStyleBackColor = false;
-            // 
             // btLop
             // 
             this.btLop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(58)))), ((int)(((byte)(116)))));
@@ -205,54 +153,6 @@
             this.btLop.Text = "     Lớp";
             this.btLop.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btLop.UseVisualStyleBackColor = false;
-            // 
-            // pnNganhHoc
-            // 
-            this.pnNganhHoc.Controls.Add(this.btNganhHoc);
-            this.pnNganhHoc.Location = new System.Drawing.Point(269, 90);
-            this.pnNganhHoc.Name = "pnNganhHoc";
-            this.pnNganhHoc.Size = new System.Drawing.Size(189, 40);
-            this.pnNganhHoc.TabIndex = 35;
-            // 
-            // btNganhHoc
-            // 
-            this.btNganhHoc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(58)))), ((int)(((byte)(116)))));
-            this.btNganhHoc.FlatAppearance.BorderSize = 0;
-            this.btNganhHoc.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(201)))), ((int)(((byte)(243)))));
-            this.btNganhHoc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btNganhHoc.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.btNganhHoc.ForeColor = System.Drawing.Color.Transparent;
-            this.btNganhHoc.Image = global::QLSinhVienHunre.Properties.Resources.library;
-            this.btNganhHoc.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btNganhHoc.Location = new System.Drawing.Point(0, 0);
-            this.btNganhHoc.Margin = new System.Windows.Forms.Padding(2);
-            this.btNganhHoc.Name = "btNganhHoc";
-            this.btNganhHoc.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btNganhHoc.Size = new System.Drawing.Size(189, 40);
-            this.btNganhHoc.TabIndex = 33;
-            this.btNganhHoc.Text = "     Ngành học";
-            this.btNganhHoc.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btNganhHoc.UseVisualStyleBackColor = false;
-            // 
-            // btMonHoc
-            // 
-            this.btMonHoc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(58)))), ((int)(((byte)(116)))));
-            this.btMonHoc.FlatAppearance.BorderSize = 0;
-            this.btMonHoc.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(201)))), ((int)(((byte)(243)))));
-            this.btMonHoc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btMonHoc.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.btMonHoc.ForeColor = System.Drawing.Color.Transparent;
-            this.btMonHoc.Image = global::QLSinhVienHunre.Properties.Resources.book;
-            this.btMonHoc.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btMonHoc.Location = new System.Drawing.Point(0, 0);
-            this.btMonHoc.Margin = new System.Windows.Forms.Padding(2);
-            this.btMonHoc.Name = "btMonHoc";
-            this.btMonHoc.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btMonHoc.Size = new System.Drawing.Size(189, 40);
-            this.btMonHoc.TabIndex = 34;
-            this.btMonHoc.Text = "     Môn học";
-            this.btMonHoc.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btMonHoc.UseVisualStyleBackColor = false;
             // 
             // pnLopHocPhan
             // 
@@ -286,14 +186,6 @@
             // 
             this.sidebartimer.Interval = 1;
             // 
-            // pnMonHoc
-            // 
-            this.pnMonHoc.Controls.Add(this.btMonHoc);
-            this.pnMonHoc.Location = new System.Drawing.Point(269, 182);
-            this.pnMonHoc.Name = "pnMonHoc";
-            this.pnMonHoc.Size = new System.Drawing.Size(189, 40);
-            this.pnMonHoc.TabIndex = 35;
-            // 
             // pnLop
             // 
             this.pnLop.Controls.Add(this.btLop);
@@ -310,27 +202,11 @@
             this.pnMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(211)))), ((int)(((byte)(244)))));
             this.pnMain.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pnMain.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnMain.Location = new System.Drawing.Point(511, 105);
+            this.pnMain.Location = new System.Drawing.Point(68, 52);
             this.pnMain.Margin = new System.Windows.Forms.Padding(2);
             this.pnMain.Name = "pnMain";
-            this.pnMain.Size = new System.Drawing.Size(719, 425);
+            this.pnMain.Size = new System.Drawing.Size(814, 555);
             this.pnMain.TabIndex = 38;
-            // 
-            // pnGiangVien
-            // 
-            this.pnGiangVien.Controls.Add(this.btGiangVien);
-            this.pnGiangVien.Location = new System.Drawing.Point(269, 274);
-            this.pnGiangVien.Name = "pnGiangVien";
-            this.pnGiangVien.Size = new System.Drawing.Size(189, 40);
-            this.pnGiangVien.TabIndex = 34;
-            // 
-            // pnSinhVien
-            // 
-            this.pnSinhVien.Controls.Add(this.btSinhVien);
-            this.pnSinhVien.Location = new System.Drawing.Point(269, 320);
-            this.pnSinhVien.Name = "pnSinhVien";
-            this.pnSinhVien.Size = new System.Drawing.Size(189, 40);
-            this.pnSinhVien.TabIndex = 35;
             // 
             // pnTaiKhoan
             // 
@@ -353,7 +229,7 @@
             this.sidebar.MaximumSize = new System.Drawing.Size(191, 1000);
             this.sidebar.MinimumSize = new System.Drawing.Size(63, 1000);
             this.sidebar.Name = "sidebar";
-            this.sidebar.Size = new System.Drawing.Size(191, 1000);
+            this.sidebar.Size = new System.Drawing.Size(63, 1000);
             this.sidebar.TabIndex = 39;
             // 
             // MenuGiangVien
@@ -361,27 +237,20 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::QLSinhVienHunre.Properties.Resources.bg_login;
-            this.ClientSize = new System.Drawing.Size(800, 487);
-            this.Controls.Add(this.pnNganhHoc);
+            this.ClientSize = new System.Drawing.Size(893, 618);
             this.Controls.Add(this.pnDangXuat);
             this.Controls.Add(this.sidebar);
-            this.Controls.Add(this.pnSinhVien);
             this.Controls.Add(this.pnMain);
-            this.Controls.Add(this.pnMonHoc);
-            this.Controls.Add(this.pnGiangVien);
-            this.MinimumSize = new System.Drawing.Size(814, 526);
+            this.MinimumSize = new System.Drawing.Size(909, 657);
             this.Name = "MenuGiangVien";
             this.Text = "MenuGiangVien";
+            this.Resize += new System.EventHandler(this.MenuGiangVien_Resize);
             this.pnDangXuat.ResumeLayout(false);
             this.pnMenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.iconMenu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.logoHunre)).EndInit();
-            this.pnNganhHoc.ResumeLayout(false);
             this.pnLopHocPhan.ResumeLayout(false);
-            this.pnMonHoc.ResumeLayout(false);
             this.pnLop.ResumeLayout(false);
-            this.pnGiangVien.ResumeLayout(false);
-            this.pnSinhVien.ResumeLayout(false);
             this.pnTaiKhoan.ResumeLayout(false);
             this.sidebar.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -396,20 +265,12 @@
         private System.Windows.Forms.PictureBox iconMenu;
         private System.Windows.Forms.PictureBox logoHunre;
         private System.Windows.Forms.Button btTaiKhoan;
-        private System.Windows.Forms.Button btSinhVien;
-        private System.Windows.Forms.Button btGiangVien;
         private System.Windows.Forms.Button btLop;
-        private System.Windows.Forms.Panel pnNganhHoc;
-        private System.Windows.Forms.Button btNganhHoc;
-        private System.Windows.Forms.Button btMonHoc;
         private System.Windows.Forms.Panel pnLopHocPhan;
         private System.Windows.Forms.Button btLopHocPhan;
         private System.Windows.Forms.Timer sidebartimer;
-        private System.Windows.Forms.Panel pnMonHoc;
         private System.Windows.Forms.Panel pnLop;
         private System.Windows.Forms.Panel pnMain;
-        private System.Windows.Forms.Panel pnGiangVien;
-        private System.Windows.Forms.Panel pnSinhVien;
         private System.Windows.Forms.Panel pnTaiKhoan;
         private System.Windows.Forms.FlowLayoutPanel sidebar;
     }

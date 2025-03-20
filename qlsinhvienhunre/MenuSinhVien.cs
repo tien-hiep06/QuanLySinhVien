@@ -7,6 +7,7 @@ using System.Drawing.Drawing2D;
 using System.Drawing.Printing;
 using System.Drawing.Text;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -17,18 +18,26 @@ namespace QLSinhVienHunre
     {
         private Form currentFormChild;
         public string idSV;
-        public MenuSinhVien(String idSinhVien)
-        {
+        public static bool dangxuat = false;
 
+        public MenuSinhVien(String idSinhVien)
+        {   
             InitializeComponent();
             idSV = idSinhVien;
             RoundPanel(pnMain);
             RoundPanel(pnDangXuat);
+            AssignButtonTag(btTTCN, new ThongTinSinhVienForm(idSV));
         }
-
         #region methods
-
+        
         bool sidebarExpand = false;
+
+        private void AssignButtonTag(Button button, Form form)
+        {
+            button.Tag = form;
+            button.Click += btChildForm_Click;
+        }
+                        
         private void RoundPanel(Panel panel)
         {
             // Kích thước của các góc tròn
@@ -51,13 +60,29 @@ namespace QLSinhVienHunre
         {
             if (currentFormChild != null)
             {
+                pnMain.Controls.Remove(currentFormChild);
                 currentFormChild.Close();
+            }
+            if (childForm.IsDisposed)
+            {
+                Type formType = childForm.GetType();
+                ConstructorInfo ctor = formType.GetConstructor(new Type[] { typeof(string) });
+
+                if (ctor != null)
+                {
+                    childForm = (Form)ctor.Invoke(new object[] { idSV });
+                }
+                else
+                {
+                    childForm = (Form)Activator.CreateInstance(formType);
+                }
             }
             currentFormChild = childForm;
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
 
             childForm.Dock = DockStyle.Fill;
+
             pnMain.Controls.Add(childForm);
             childForm.Show();
         }
@@ -115,10 +140,16 @@ namespace QLSinhVienHunre
         #endregion
 
         #region events
-
-        private void btTTCN_Click(object sender, EventArgs e)
+        private void btChildForm_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new ThongTinSinhVienForm(idSV));
+            if (sender is Button btn)
+            {
+                Form childForm = btn.Tag as Form;
+                if (childForm != null)
+                {
+                    OpenChildForm(childForm);
+                }
+            }
         }
 
         private void btKetQua_Click(object sender, EventArgs e)
@@ -131,23 +162,19 @@ namespace QLSinhVienHunre
 
             if (result == DialogResult.Yes)
             {
-                this.Hide();
-                LoginForm lg = new LoginForm();
-                lg.ShowDialog();
-                this.Close();
+                dangxuat = true;
+                Application.Restart();
             }
+        }
+        private void MenuSinhVien_Resize(object sender, EventArgs e)
+        {
+            RoundPanel(pnMain);
         }
 
         private void iconMenu_Click(object sender, EventArgs e)
         {
             sidebartimer.Start();
-        }
-        
-
-        private void pnMain_Resize(object sender, EventArgs e)
-        {
-            RoundPanel(pnMain);
-        }
+        }       
         #endregion
     }
 }

@@ -155,7 +155,7 @@
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Location = new System.Drawing.Point(237, 12);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(492, 476);
+            this.groupBox2.Size = new System.Drawing.Size(565, 531);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Danh sách";
@@ -169,7 +169,7 @@
             this.dGVThongTin.Location = new System.Drawing.Point(7, 45);
             this.dGVThongTin.Name = "dGVThongTin";
             this.dGVThongTin.RowHeadersWidth = 51;
-            this.dGVThongTin.Size = new System.Drawing.Size(479, 422);
+            this.dGVThongTin.Size = new System.Drawing.Size(552, 477);
             this.dGVThongTin.TabIndex = 10;
             this.dGVThongTin.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGVThongTin_CellClick);
             // 
@@ -177,7 +177,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(741, 500);
+            this.ClientSize = new System.Drawing.Size(814, 555);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

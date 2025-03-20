@@ -54,12 +54,12 @@
             this.lbMaSV = new System.Windows.Forms.Label();
             this.lbLopHoc = new System.Windows.Forms.Label();
             this.lbHoTen = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.gbDanhSach = new System.Windows.Forms.GroupBox();
             this.DGVKetQua = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
+            this.gbDanhSach.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGVKetQua)).BeginInit();
             this.SuspendLayout();
             // 
@@ -139,7 +139,7 @@
             // 
             this.pictureBox1.BackgroundImage = global::QLSinhVienHunre.Properties.Resources.no_avatar;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(88, 54);
+            this.pictureBox1.Location = new System.Drawing.Point(86, 54);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(130, 130);
@@ -170,7 +170,7 @@
             this.groupBox3.Controls.Add(this.label1);
             this.groupBox3.Controls.Add(this.label9);
             this.groupBox3.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(16, 402);
+            this.groupBox3.Location = new System.Drawing.Point(13, 401);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -280,7 +280,7 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(16, 197);
+            this.groupBox1.Location = new System.Drawing.Point(13, 197);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(278, 190);
             this.groupBox1.TabIndex = 32;
@@ -347,43 +347,38 @@
             this.lbHoTen.TabIndex = 25;
             this.lbHoTen.Text = "Nguyen Van A";
             // 
-            // groupBox2
+            // gbDanhSach
             // 
-            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.gbDanhSach.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox2.Controls.Add(this.DGVKetQua);
-            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(299, 13);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.groupBox2.Size = new System.Drawing.Size(828, 533);
-            this.groupBox2.TabIndex = 33;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Bảng điểm";
+            this.gbDanhSach.Controls.Add(this.DGVKetQua);
+            this.gbDanhSach.Location = new System.Drawing.Point(297, 12);
+            this.gbDanhSach.Name = "gbDanhSach";
+            this.gbDanhSach.Size = new System.Drawing.Size(505, 531);
+            this.gbDanhSach.TabIndex = 34;
+            this.gbDanhSach.TabStop = false;
+            this.gbDanhSach.Text = "Kết quả học tập";
             // 
             // DGVKetQua
             // 
+            this.DGVKetQua.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.DGVKetQua.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGVKetQua.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DGVKetQua.Location = new System.Drawing.Point(2, 18);
-            this.DGVKetQua.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.DGVKetQua.Location = new System.Drawing.Point(6, 16);
             this.DGVKetQua.Name = "DGVKetQua";
-            this.DGVKetQua.RowHeadersWidth = 51;
-            this.DGVKetQua.RowTemplate.Height = 24;
-            this.DGVKetQua.Size = new System.Drawing.Size(824, 512);
+            this.DGVKetQua.RowHeadersWidth = 82;
+            this.DGVKetQua.Size = new System.Drawing.Size(493, 509);
             this.DGVKetQua.TabIndex = 0;
             // 
             // ThongTinSinhVienForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSize = true;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1138, 556);
-            this.ControlBox = false;
-            this.Controls.Add(this.groupBox2);
+            this.ClientSize = new System.Drawing.Size(814, 555);
+            this.Controls.Add(this.gbDanhSach);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.label8);
@@ -399,7 +394,7 @@
             this.groupBox3.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
+            this.gbDanhSach.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DGVKetQua)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -432,7 +427,7 @@
         private System.Windows.Forms.Label lbDiemHe4;
         private System.Windows.Forms.Label lbDiemHe10;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox gbDanhSach;
         private System.Windows.Forms.DataGridView DGVKetQua;
     }
 }

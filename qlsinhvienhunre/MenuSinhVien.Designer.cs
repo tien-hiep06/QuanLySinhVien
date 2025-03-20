@@ -34,7 +34,6 @@
             this.btDangXuat = new System.Windows.Forms.Button();
             this.btKetQua = new System.Windows.Forms.Button();
             this.btTTCN = new System.Windows.Forms.Button();
-            this.pnMain = new System.Windows.Forms.Panel();
             this.sidebar = new System.Windows.Forms.FlowLayoutPanel();
             this.pnMenu = new System.Windows.Forms.Panel();
             this.iconMenu = new System.Windows.Forms.PictureBox();
@@ -42,6 +41,7 @@
             this.pnTTCN = new System.Windows.Forms.Panel();
             this.pnkqht = new System.Windows.Forms.Panel();
             this.sidebartimer = new System.Windows.Forms.Timer(this.components);
+            this.pnMain = new System.Windows.Forms.Panel();
             this.pnDangXuat.SuspendLayout();
             this.sidebar.SuspendLayout();
             this.pnMenu.SuspendLayout();
@@ -55,7 +55,7 @@
             // 
             this.pnDangXuat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pnDangXuat.Controls.Add(this.btDangXuat);
-            this.pnDangXuat.Location = new System.Drawing.Point(598, 7);
+            this.pnDangXuat.Location = new System.Drawing.Point(693, 7);
             this.pnDangXuat.Name = "pnDangXuat";
             this.pnDangXuat.Size = new System.Drawing.Size(189, 39);
             this.pnDangXuat.TabIndex = 4;
@@ -83,13 +83,13 @@
             this.btKetQua.ForeColor = System.Drawing.Color.Transparent;
             this.btKetQua.Image = ((System.Drawing.Image)(resources.GetObject("btKetQua.Image")));
             this.btKetQua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btKetQua.Location = new System.Drawing.Point(0, 0);
+            this.btKetQua.Location = new System.Drawing.Point(-3, 0);
             this.btKetQua.Margin = new System.Windows.Forms.Padding(2);
             this.btKetQua.Name = "btKetQua";
             this.btKetQua.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btKetQua.Size = new System.Drawing.Size(189, 40);
             this.btKetQua.TabIndex = 1;
-            this.btKetQua.Text = "     Kết quả học tập";
+            this.btKetQua.Text = "    Đăng ký học phần";
             this.btKetQua.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btKetQua.UseVisualStyleBackColor = false;
             this.btKetQua.Click += new System.EventHandler(this.btKetQua_Click);
@@ -103,7 +103,7 @@
             this.btTTCN.ForeColor = System.Drawing.Color.Transparent;
             this.btTTCN.Image = global::QLSinhVienHunre.Properties.Resources.account;
             this.btTTCN.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btTTCN.Location = new System.Drawing.Point(0, 0);
+            this.btTTCN.Location = new System.Drawing.Point(-3, 0);
             this.btTTCN.Margin = new System.Windows.Forms.Padding(2);
             this.btTTCN.Name = "btTTCN";
             this.btTTCN.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
@@ -112,20 +112,6 @@
             this.btTTCN.Text = "    Thông tin cá nhân";
             this.btTTCN.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btTTCN.UseVisualStyleBackColor = false;
-            this.btTTCN.Click += new System.EventHandler(this.btTTCN_Click);
-            // 
-            // pnMain
-            // 
-            this.pnMain.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(211)))), ((int)(((byte)(244)))));
-            this.pnMain.Location = new System.Drawing.Point(68, 51);
-            this.pnMain.Margin = new System.Windows.Forms.Padding(2);
-            this.pnMain.Name = "pnMain";
-            this.pnMain.Size = new System.Drawing.Size(719, 425);
-            this.pnMain.TabIndex = 4;
-            this.pnMain.Resize += new System.EventHandler(this.pnMain_Resize);
             // 
             // sidebar
             // 
@@ -202,22 +188,37 @@
             this.sidebartimer.Interval = 1;
             this.sidebartimer.Tick += new System.EventHandler(this.sidebartimer_Tick);
             // 
+            // pnMain
+            // 
+            this.pnMain.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(211)))), ((int)(((byte)(244)))));
+            this.pnMain.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pnMain.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnMain.Location = new System.Drawing.Point(68, 52);
+            this.pnMain.Margin = new System.Windows.Forms.Padding(2);
+            this.pnMain.Name = "pnMain";
+            this.pnMain.Size = new System.Drawing.Size(814, 555);
+            this.pnMain.TabIndex = 35;
+            // 
             // MenuSinhVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::QLSinhVienHunre.Properties.Resources.wrapper_bg;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(798, 487);
-            this.Controls.Add(this.pnDangXuat);
+            this.ClientSize = new System.Drawing.Size(893, 618);
             this.Controls.Add(this.sidebar);
             this.Controls.Add(this.pnMain);
+            this.Controls.Add(this.pnDangXuat);
             this.DoubleBuffered = true;
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.MinimumSize = new System.Drawing.Size(814, 526);
+            this.MinimumSize = new System.Drawing.Size(909, 657);
             this.Name = "MenuSinhVien";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MenuSinhVien";
+            this.Resize += new System.EventHandler(this.MenuSinhVien_Resize);
             this.pnDangXuat.ResumeLayout(false);
             this.sidebar.ResumeLayout(false);
             this.pnMenu.ResumeLayout(false);
@@ -230,7 +231,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.Panel pnMain;
         private System.Windows.Forms.Button btDangXuat;
         private System.Windows.Forms.Button btKetQua;
         private System.Windows.Forms.Button btTTCN;
@@ -242,5 +242,6 @@
         private System.Windows.Forms.Panel pnkqht;
         private System.Windows.Forms.Timer sidebartimer;
         private System.Windows.Forms.Panel pnDangXuat;
+        private System.Windows.Forms.Panel pnMain;
     }
 }
