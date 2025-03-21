@@ -23,13 +23,20 @@ namespace QLSinhVienHunre
 
         void LoadData()
         {
-            cbLop.DataSource = db.Lop.Select(p => p.maLop).ToList();
-            LoadDGV();
+            LoadYears();
+            LoadDGV();       
         }
         void LoadDGV()
         {
+            int selectedYear;
+            if (!int.TryParse(cbNamNhapHoc.SelectedValue?.ToString(), out selectedYear))
+            {
+                selectedYear = DateTime.Now.Year; // Giá trị mặc định nếu không lấy được năm
+            }
+            // Lấy dữ liệu từ database
+
             var result = from c in db.SinhVien
-                         where c.idSinhVien > 0 && c.Lop.maLop == cbLop.SelectedValue
+                         where c.idSinhVien > 0 && c.namNhapHoc == selectedYear
                          select new
                          {
                              maSinhVien = c.maSinhVien,
@@ -38,36 +45,63 @@ namespace QLSinhVienHunre
                              ngaySinh = c.ngaySinh,
                              gioiTinh = c.gioiTinh,
                              namNhapHoc = c.namNhapHoc,
-
                          };
+
             dGVSinhVien.DataSource = result.ToList();
         }
-
-        void AddBinding()
+        private void LoadYears()
         {
+            int startYear = 2000;
+            int currentYear = DateTime.Now.Year;
+
+            // Tạo danh sách object chứa Text và Value
+            var years = new List<object>();
+            for (int year = startYear; year <= currentYear; year++)
+            {
+                years.Add(new { Text = year.ToString(), Value = year });
+            }
+
+            cbNamNhapHoc.DataSource = years; // Gán danh sách vào ComboBox
+            cbNamNhapHoc.DisplayMember = "Text";  // Hiển thị năm
+            cbNamNhapHoc.ValueMember = "Value";  // Giá trị thực sự
+
+            cbNamNhapHoc.SelectedValue = currentYear; // Đặt giá trị mặc định là năm hiện tại
+
+        }
+
+        void AddBinding(DataGridViewCellEventArgs e)
+        {
+            // Kiểm tra nếu DataSource của DataGridView là null thì return
             if (dGVSinhVien.DataSource == null) return;
+            // Kiểm tra nếu có dữ liệu trong DataGridView gắn dữ liệu cho các control
             else
             {
                 tbMaSV.DataBindings.Add("Text", dGVSinhVien.DataSource, "maSinhVien", true, DataSourceUpdateMode.Never);
                 tbHoTen.DataBindings.Add("Text", dGVSinhVien.DataSource, "hotenSinhVien", true, DataSourceUpdateMode.Never);
                 dTPNgaySinh.DataBindings.Add("Value", dGVSinhVien.DataSource, "ngaySinh", true, DataSourceUpdateMode.Never);
-                dTPNam.DataBindings.Add("Value", dGVSinhVien.DataSource, "namNhapHoc", true, DataSourceUpdateMode.Never);
-                dTPNam.DataBindings[0].Format += (s, e) =>
+                if (e.RowIndex >= 0 && e.RowIndex < dGVSinhVien.Rows.Count)
                 {
-                    if (e.Value != null && e.DesiredType == typeof(DateTime))
+                    // Lấy giá trị giới tính từ dòng được chọn
+                    string gioiTinh = dGVSinhVien.Rows[e.RowIndex].Cells["gioiTinh"].Value.ToString();
+
+                    // Kiểm tra giới tính và chọn RadioButton tương ứng
+                    if (gioiTinh == "Nam")
                     {
-                        int namNhapHoc = (int)e.Value;
-                        e.Value = new DateTime(namNhapHoc, 1, 1); // Giả sử năm nhập học là ngày 1 tháng 1 của năm đó
+                        nam.Checked = true;
                     }
-                };
+                    else if (gioiTinh == "Nữ")
+                    {
+                        nu.Checked = true;
+                    }
+                }
             }
         }
         void ClearBinding()
         {
+            // Xóa dữ liệu của các control
             tbMaSV.DataBindings.Clear();
             tbHoTen.DataBindings.Clear();
             dTPNgaySinh.DataBindings.Clear();
-            dTPNam.DataBindings.Clear();
         }
 
         SinhVien SelectData(String maSinhVien)
@@ -78,6 +112,7 @@ namespace QLSinhVienHunre
 
         void AddData()
         {
+            // Lấy giá trị của RadioButton được chọn
             string selectedValue = null;
             foreach (RadioButton radioButton in panelGioiTinh.Controls)
             {
@@ -88,14 +123,13 @@ namespace QLSinhVienHunre
 
                 }
             }
-            Lop lop = db.Lop.Where(p => p.maLop == cbLop.SelectedValue).SingleOrDefault();
+            // Lấy lớp từ combobox
             SinhVien sinhVien = new SinhVien()
             {
                 hotenSinhVien = tbHoTen.Text,
                 ngaySinh = dTPNgaySinh.Value.Date,
                 gioiTinh = selectedValue,
-                namNhapHoc = dTPNam.Value.Year,
-                idLop = Convert.ToInt32(lop.idLop)
+                namNhapHoc = (int)cbNamNhapHoc.SelectedValue
             };
 
             try
@@ -145,7 +179,6 @@ namespace QLSinhVienHunre
                 sinhVien.hotenSinhVien = tbHoTen.Text;
                 sinhVien.ngaySinh = dTPNgaySinh.Value.Date;
                 sinhVien.gioiTinh = selectedValue.ToString();
-                sinhVien.namNhapHoc = dTPNam.Value.Year;
                 try
                 {
                     db.SaveChanges();
@@ -187,10 +220,10 @@ namespace QLSinhVienHunre
             tbMaSV.Clear();
             tbHoTen.Clear();
             dTPNgaySinh.Value = DateTime.Now;
-            dTPNam.Value = DateTime.Now;
             nam.Checked = false;
             nu.Checked = false;
         }
+
         Boolean CheckNotNull()
         {
             if (string.IsNullOrEmpty(tbHoTen.Text) || (!nam.Checked && !nu.Checked))
@@ -198,6 +231,7 @@ namespace QLSinhVienHunre
             else
                 return true;
         }
+
         #endregion
 
         #region event
@@ -250,23 +284,13 @@ namespace QLSinhVienHunre
 
         private void dGVSinhVien_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0 && e.RowIndex < dGVSinhVien.Rows.Count)
-            {
-                // Lấy giá trị giới tính từ dòng được chọn
-                string gioiTinh = dGVSinhVien.Rows[e.RowIndex].Cells["gioiTinh"].Value.ToString();
-
-                // Kiểm tra giới tính và chọn RadioButton tương ứng
-                if (gioiTinh == "Nam")
-                {
-                    nam.Checked = true;
-                }
-                else if (gioiTinh == "Nữ")
-                {
-                    nu.Checked = true;
-                }
-            }
             ClearBinding();
-            AddBinding();
+            AddBinding(e);
+        }
+
+        private void cbNamNhapHoc_SelectedValueChanged(object sender, EventArgs e)
+        {
+            LoadDGV();
         }
         #endregion
     }

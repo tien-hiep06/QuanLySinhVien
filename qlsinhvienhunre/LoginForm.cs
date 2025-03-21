@@ -62,7 +62,7 @@ namespace QLSinhVienHunre
                 MessageBox.Show("Đăng nhập thành công");
                 // Nếu thông tin đăng nhập chính xác, đóng form đăng nhập và mở form menu chính
                 this.Hide();
-                KetQuaHocPhanForm menuGV = new KetQuaHocPhanForm(tbUserName.Text);
+                MenuGiangVien menuGV = new MenuGiangVien(tbUserName.Text);
                 menuGV.ShowDialog();
                 this.Close();
             }

@@ -183,7 +183,7 @@
             this.groupBox3.Controls.Add(this.textBox1);
             this.groupBox3.Location = new System.Drawing.Point(211, 12);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(377, 425);
+            this.groupBox3.Size = new System.Drawing.Size(590, 530);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Danh sách lớp";
@@ -199,7 +199,7 @@
             this.dGVLop.Location = new System.Drawing.Point(7, 46);
             this.dGVLop.Name = "dGVLop";
             this.dGVLop.RowHeadersWidth = 51;
-            this.dGVLop.Size = new System.Drawing.Size(364, 373);
+            this.dGVLop.Size = new System.Drawing.Size(577, 478);
             this.dGVLop.TabIndex = 0;
             this.dGVLop.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGVLop_CellClick);
             // 
@@ -215,7 +215,7 @@
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(116, 170);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(128, 20);
             this.textBox1.TabIndex = 10;
@@ -227,7 +227,7 @@
             this.groupBox4.Controls.Add(this.dGVGiangVien);
             this.groupBox4.Location = new System.Drawing.Point(12, 190);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(193, 247);
+            this.groupBox4.Size = new System.Drawing.Size(193, 352);
             this.groupBox4.TabIndex = 3;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Danh sách giảng viên";
@@ -241,7 +241,7 @@
             this.dGVGiangVien.Location = new System.Drawing.Point(7, 20);
             this.dGVGiangVien.Name = "dGVGiangVien";
             this.dGVGiangVien.RowHeadersWidth = 51;
-            this.dGVGiangVien.Size = new System.Drawing.Size(180, 221);
+            this.dGVGiangVien.Size = new System.Drawing.Size(180, 326);
             this.dGVGiangVien.TabIndex = 0;
             this.dGVGiangVien.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGVGiangVien_CellClick);
             // 
@@ -249,7 +249,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(601, 450);
+            this.ClientSize = new System.Drawing.Size(814, 555);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);

@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.gbThongTin = new System.Windows.Forms.GroupBox();
-            this.dTPNam = new System.Windows.Forms.DateTimePicker();
+            this.cbNamNhapHoc = new System.Windows.Forms.ComboBox();
             this.panelGioiTinh = new System.Windows.Forms.Panel();
             this.nu = new System.Windows.Forms.RadioButton();
             this.nam = new System.Windows.Forms.RadioButton();
@@ -41,8 +41,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lbSV = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.cbLop = new System.Windows.Forms.ComboBox();
             this.gbDanhSach = new System.Windows.Forms.GroupBox();
             this.dGVSinhVien = new System.Windows.Forms.DataGridView();
             this.gbChucNang = new System.Windows.Forms.GroupBox();
@@ -60,7 +58,7 @@
             // 
             // gbThongTin
             // 
-            this.gbThongTin.Controls.Add(this.dTPNam);
+            this.gbThongTin.Controls.Add(this.cbNamNhapHoc);
             this.gbThongTin.Controls.Add(this.panelGioiTinh);
             this.gbThongTin.Controls.Add(this.dTPNgaySinh);
             this.gbThongTin.Controls.Add(this.tbHoTen);
@@ -77,14 +75,14 @@
             this.gbThongTin.TabStop = false;
             this.gbThongTin.Text = "Thông tin chi tiết";
             // 
-            // dTPNam
+            // cbNamNhapHoc
             // 
-            this.dTPNam.CustomFormat = "yyyy";
-            this.dTPNam.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dTPNam.Location = new System.Drawing.Point(113, 133);
-            this.dTPNam.Name = "dTPNam";
-            this.dTPNam.Size = new System.Drawing.Size(58, 20);
-            this.dTPNam.TabIndex = 9;
+            this.cbNamNhapHoc.FormattingEnabled = true;
+            this.cbNamNhapHoc.Location = new System.Drawing.Point(113, 133);
+            this.cbNamNhapHoc.Name = "cbNamNhapHoc";
+            this.cbNamNhapHoc.Size = new System.Drawing.Size(131, 21);
+            this.cbNamNhapHoc.TabIndex = 12;
+            this.cbNamNhapHoc.SelectedValueChanged += new System.EventHandler(this.cbNamNhapHoc_SelectedValueChanged);
             // 
             // panelGioiTinh
             // 
@@ -92,13 +90,13 @@
             this.panelGioiTinh.Controls.Add(this.nam);
             this.panelGioiTinh.Location = new System.Drawing.Point(113, 101);
             this.panelGioiTinh.Name = "panelGioiTinh";
-            this.panelGioiTinh.Size = new System.Drawing.Size(100, 26);
+            this.panelGioiTinh.Size = new System.Drawing.Size(131, 26);
             this.panelGioiTinh.TabIndex = 4;
             // 
             // nu
             // 
             this.nu.AutoSize = true;
-            this.nu.Location = new System.Drawing.Point(56, 5);
+            this.nu.Location = new System.Drawing.Point(76, 5);
             this.nu.Name = "nu";
             this.nu.Size = new System.Drawing.Size(39, 17);
             this.nu.TabIndex = 1;
@@ -108,7 +106,7 @@
             // nam
             // 
             this.nam.AutoSize = true;
-            this.nam.Location = new System.Drawing.Point(3, 5);
+            this.nam.Location = new System.Drawing.Point(11, 5);
             this.nam.Name = "nam";
             this.nam.Size = new System.Drawing.Size(47, 17);
             this.nam.TabIndex = 0;
@@ -184,36 +182,12 @@
             this.lbSV.TabIndex = 0;
             this.lbSV.Text = "Mã sinh viên";
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(7, 26);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(25, 13);
-            this.label6.TabIndex = 11;
-            this.label6.Text = "Lớp";
-            // 
-            // cbLop
-            // 
-            this.cbLop.FormattingEnabled = true;
-            this.cbLop.Items.AddRange(new object[] {
-            "fdfd",
-            "fdfhdj",
-            "hjhdf"});
-            this.cbLop.Location = new System.Drawing.Point(38, 23);
-            this.cbLop.Name = "cbLop";
-            this.cbLop.Size = new System.Drawing.Size(97, 21);
-            this.cbLop.TabIndex = 10;
-            this.cbLop.SelectedValueChanged += new System.EventHandler(this.cbLop_SelectedValueChanged);
-            // 
             // gbDanhSach
             // 
             this.gbDanhSach.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gbDanhSach.Controls.Add(this.dGVSinhVien);
-            this.gbDanhSach.Controls.Add(this.label6);
-            this.gbDanhSach.Controls.Add(this.cbLop);
             this.gbDanhSach.Location = new System.Drawing.Point(271, 12);
             this.gbDanhSach.Name = "gbDanhSach";
             this.gbDanhSach.Size = new System.Drawing.Size(531, 523);
@@ -227,10 +201,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dGVSinhVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dGVSinhVien.Location = new System.Drawing.Point(6, 49);
+            this.dGVSinhVien.Location = new System.Drawing.Point(6, 19);
             this.dGVSinhVien.Name = "dGVSinhVien";
             this.dGVSinhVien.RowHeadersWidth = 82;
-            this.dGVSinhVien.Size = new System.Drawing.Size(519, 468);
+            this.dGVSinhVien.Size = new System.Drawing.Size(519, 498);
             this.dGVSinhVien.TabIndex = 0;
             this.dGVSinhVien.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGVSinhVien_CellClick);
             // 
@@ -304,7 +278,6 @@
             this.panelGioiTinh.ResumeLayout(false);
             this.panelGioiTinh.PerformLayout();
             this.gbDanhSach.ResumeLayout(false);
-            this.gbDanhSach.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dGVSinhVien)).EndInit();
             this.gbChucNang.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -323,10 +296,8 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox cbLop;
         private System.Windows.Forms.DateTimePicker dTPNgaySinh;
         private System.Windows.Forms.Panel panelGioiTinh;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnEdit;
@@ -335,6 +306,6 @@
         private System.Windows.Forms.DataGridView dGVSinhVien;
         private System.Windows.Forms.RadioButton nu;
         private System.Windows.Forms.RadioButton nam;
-        private System.Windows.Forms.DateTimePicker dTPNam;
+        private System.Windows.Forms.ComboBox cbNamNhapHoc;
     }
 }

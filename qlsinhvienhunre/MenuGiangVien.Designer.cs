@@ -35,11 +35,11 @@
             this.iconMenu = new System.Windows.Forms.PictureBox();
             this.logoHunre = new System.Windows.Forms.PictureBox();
             this.btTaiKhoan = new System.Windows.Forms.Button();
-            this.btLop = new System.Windows.Forms.Button();
-            this.pnLopHocPhan = new System.Windows.Forms.Panel();
-            this.btLopHocPhan = new System.Windows.Forms.Button();
+            this.btLopHoc = new System.Windows.Forms.Button();
+            this.pnKetQuaHocPhan = new System.Windows.Forms.Panel();
+            this.btKetQuaHocPhan = new System.Windows.Forms.Button();
             this.sidebartimer = new System.Windows.Forms.Timer(this.components);
-            this.pnLop = new System.Windows.Forms.Panel();
+            this.pnLopHoc = new System.Windows.Forms.Panel();
             this.pnMain = new System.Windows.Forms.Panel();
             this.pnTaiKhoan = new System.Windows.Forms.Panel();
             this.sidebar = new System.Windows.Forms.FlowLayoutPanel();
@@ -47,8 +47,8 @@
             this.pnMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.logoHunre)).BeginInit();
-            this.pnLopHocPhan.SuspendLayout();
-            this.pnLop.SuspendLayout();
+            this.pnKetQuaHocPhan.SuspendLayout();
+            this.pnLopHoc.SuspendLayout();
             this.pnTaiKhoan.SuspendLayout();
             this.sidebar.SuspendLayout();
             this.SuspendLayout();
@@ -98,6 +98,7 @@
             this.iconMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.iconMenu.TabIndex = 8;
             this.iconMenu.TabStop = false;
+            this.iconMenu.Click += new System.EventHandler(this.iconMenu_Click);
             // 
             // logoHunre
             // 
@@ -124,7 +125,7 @@
             this.btTaiKhoan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(236)))), ((int)(((byte)(250)))));
             this.btTaiKhoan.Image = global::QLSinhVienHunre.Properties.Resources.account;
             this.btTaiKhoan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btTaiKhoan.Location = new System.Drawing.Point(0, 0);
+            this.btTaiKhoan.Location = new System.Drawing.Point(-3, 0);
             this.btTaiKhoan.Margin = new System.Windows.Forms.Padding(2);
             this.btTaiKhoan.Name = "btTaiKhoan";
             this.btTaiKhoan.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
@@ -134,65 +135,66 @@
             this.btTaiKhoan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btTaiKhoan.UseVisualStyleBackColor = false;
             // 
-            // btLop
+            // btLopHoc
             // 
-            this.btLop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(58)))), ((int)(((byte)(116)))));
-            this.btLop.FlatAppearance.BorderSize = 0;
-            this.btLop.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(201)))), ((int)(((byte)(243)))));
-            this.btLop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btLop.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.btLop.ForeColor = System.Drawing.Color.Transparent;
-            this.btLop.Image = global::QLSinhVienHunre.Properties.Resources._class;
-            this.btLop.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btLop.Location = new System.Drawing.Point(0, 0);
-            this.btLop.Margin = new System.Windows.Forms.Padding(2);
-            this.btLop.Name = "btLop";
-            this.btLop.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btLop.Size = new System.Drawing.Size(189, 40);
-            this.btLop.TabIndex = 36;
-            this.btLop.Text = "     Lớp";
-            this.btLop.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btLop.UseVisualStyleBackColor = false;
+            this.btLopHoc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(58)))), ((int)(((byte)(116)))));
+            this.btLopHoc.FlatAppearance.BorderSize = 0;
+            this.btLopHoc.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(201)))), ((int)(((byte)(243)))));
+            this.btLopHoc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btLopHoc.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.btLopHoc.ForeColor = System.Drawing.Color.Transparent;
+            this.btLopHoc.Image = global::QLSinhVienHunre.Properties.Resources._class;
+            this.btLopHoc.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btLopHoc.Location = new System.Drawing.Point(-3, 0);
+            this.btLopHoc.Margin = new System.Windows.Forms.Padding(2);
+            this.btLopHoc.Name = "btLopHoc";
+            this.btLopHoc.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btLopHoc.Size = new System.Drawing.Size(189, 40);
+            this.btLopHoc.TabIndex = 36;
+            this.btLopHoc.Text = "     Lớp học";
+            this.btLopHoc.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btLopHoc.UseVisualStyleBackColor = false;
             // 
-            // pnLopHocPhan
+            // pnKetQuaHocPhan
             // 
-            this.pnLopHocPhan.Controls.Add(this.btLopHocPhan);
-            this.pnLopHocPhan.Location = new System.Drawing.Point(3, 105);
-            this.pnLopHocPhan.Name = "pnLopHocPhan";
-            this.pnLopHocPhan.Size = new System.Drawing.Size(189, 40);
-            this.pnLopHocPhan.TabIndex = 35;
+            this.pnKetQuaHocPhan.Controls.Add(this.btKetQuaHocPhan);
+            this.pnKetQuaHocPhan.Location = new System.Drawing.Point(3, 105);
+            this.pnKetQuaHocPhan.Name = "pnKetQuaHocPhan";
+            this.pnKetQuaHocPhan.Size = new System.Drawing.Size(189, 40);
+            this.pnKetQuaHocPhan.TabIndex = 35;
             // 
-            // btLopHocPhan
+            // btKetQuaHocPhan
             // 
-            this.btLopHocPhan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(58)))), ((int)(((byte)(116)))));
-            this.btLopHocPhan.FlatAppearance.BorderSize = 0;
-            this.btLopHocPhan.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(201)))), ((int)(((byte)(243)))));
-            this.btLopHocPhan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btLopHocPhan.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.btLopHocPhan.ForeColor = System.Drawing.Color.Transparent;
-            this.btLopHocPhan.Image = global::QLSinhVienHunre.Properties.Resources.globe;
-            this.btLopHocPhan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btLopHocPhan.Location = new System.Drawing.Point(0, 0);
-            this.btLopHocPhan.Margin = new System.Windows.Forms.Padding(2);
-            this.btLopHocPhan.Name = "btLopHocPhan";
-            this.btLopHocPhan.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btLopHocPhan.Size = new System.Drawing.Size(189, 40);
-            this.btLopHocPhan.TabIndex = 35;
-            this.btLopHocPhan.Text = "     Lớp học phần";
-            this.btLopHocPhan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btLopHocPhan.UseVisualStyleBackColor = false;
+            this.btKetQuaHocPhan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(58)))), ((int)(((byte)(116)))));
+            this.btKetQuaHocPhan.FlatAppearance.BorderSize = 0;
+            this.btKetQuaHocPhan.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(201)))), ((int)(((byte)(243)))));
+            this.btKetQuaHocPhan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btKetQuaHocPhan.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.btKetQuaHocPhan.ForeColor = System.Drawing.Color.Transparent;
+            this.btKetQuaHocPhan.Image = global::QLSinhVienHunre.Properties.Resources.globe;
+            this.btKetQuaHocPhan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btKetQuaHocPhan.Location = new System.Drawing.Point(-3, 0);
+            this.btKetQuaHocPhan.Margin = new System.Windows.Forms.Padding(2);
+            this.btKetQuaHocPhan.Name = "btKetQuaHocPhan";
+            this.btKetQuaHocPhan.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btKetQuaHocPhan.Size = new System.Drawing.Size(189, 40);
+            this.btKetQuaHocPhan.TabIndex = 35;
+            this.btKetQuaHocPhan.Text = "     Kết quả học phần";
+            this.btKetQuaHocPhan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btKetQuaHocPhan.UseVisualStyleBackColor = false;
             // 
             // sidebartimer
             // 
             this.sidebartimer.Interval = 1;
+            this.sidebartimer.Tick += new System.EventHandler(this.sidebartimer_Tick);
             // 
-            // pnLop
+            // pnLopHoc
             // 
-            this.pnLop.Controls.Add(this.btLop);
-            this.pnLop.Location = new System.Drawing.Point(3, 151);
-            this.pnLop.Name = "pnLop";
-            this.pnLop.Size = new System.Drawing.Size(189, 40);
-            this.pnLop.TabIndex = 35;
+            this.pnLopHoc.Controls.Add(this.btLopHoc);
+            this.pnLopHoc.Location = new System.Drawing.Point(3, 151);
+            this.pnLopHoc.Name = "pnLopHoc";
+            this.pnLopHoc.Size = new System.Drawing.Size(189, 40);
+            this.pnLopHoc.TabIndex = 35;
             // 
             // pnMain
             // 
@@ -222,8 +224,8 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.sidebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(58)))), ((int)(((byte)(116)))));
             this.sidebar.Controls.Add(this.pnMenu);
-            this.sidebar.Controls.Add(this.pnLopHocPhan);
-            this.sidebar.Controls.Add(this.pnLop);
+            this.sidebar.Controls.Add(this.pnKetQuaHocPhan);
+            this.sidebar.Controls.Add(this.pnLopHoc);
             this.sidebar.Controls.Add(this.pnTaiKhoan);
             this.sidebar.Location = new System.Drawing.Point(0, 0);
             this.sidebar.MaximumSize = new System.Drawing.Size(191, 1000);
@@ -249,8 +251,8 @@
             this.pnMenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.iconMenu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.logoHunre)).EndInit();
-            this.pnLopHocPhan.ResumeLayout(false);
-            this.pnLop.ResumeLayout(false);
+            this.pnKetQuaHocPhan.ResumeLayout(false);
+            this.pnLopHoc.ResumeLayout(false);
             this.pnTaiKhoan.ResumeLayout(false);
             this.sidebar.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -265,11 +267,11 @@
         private System.Windows.Forms.PictureBox iconMenu;
         private System.Windows.Forms.PictureBox logoHunre;
         private System.Windows.Forms.Button btTaiKhoan;
-        private System.Windows.Forms.Button btLop;
-        private System.Windows.Forms.Panel pnLopHocPhan;
-        private System.Windows.Forms.Button btLopHocPhan;
+        private System.Windows.Forms.Button btLopHoc;
+        private System.Windows.Forms.Panel pnKetQuaHocPhan;
+        private System.Windows.Forms.Button btKetQuaHocPhan;
         private System.Windows.Forms.Timer sidebartimer;
-        private System.Windows.Forms.Panel pnLop;
+        private System.Windows.Forms.Panel pnLopHoc;
         private System.Windows.Forms.Panel pnMain;
         private System.Windows.Forms.Panel pnTaiKhoan;
         private System.Windows.Forms.FlowLayoutPanel sidebar;

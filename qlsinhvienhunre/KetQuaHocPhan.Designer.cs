@@ -39,13 +39,13 @@
             this.tbMLHP = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.cbHocKy = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.cbNamHoc = new System.Windows.Forms.ComboBox();
             this.dGVSinhVien = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.cbNamHoc = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.cbHocKy = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dGVSinhVien)).BeginInit();
@@ -166,6 +166,52 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Danh sách sinh viên";
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(200, 22);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(41, 13);
+            this.label6.TabIndex = 10;
+            this.label6.Text = "Học kỳ";
+            // 
+            // cbHocKy
+            // 
+            this.cbHocKy.BackColor = System.Drawing.SystemColors.Window;
+            this.cbHocKy.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbHocKy.FormattingEnabled = true;
+            this.cbHocKy.Items.AddRange(new object[] {
+            "SV",
+            "GV"});
+            this.cbHocKy.Location = new System.Drawing.Point(253, 19);
+            this.cbHocKy.Name = "cbHocKy";
+            this.cbHocKy.Size = new System.Drawing.Size(121, 21);
+            this.cbHocKy.TabIndex = 9;
+            this.cbHocKy.SelectedValueChanged += new System.EventHandler(this.cbHocKy_SelectedValueChanged);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(10, 22);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(50, 13);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "Năm học";
+            // 
+            // cbNamHoc
+            // 
+            this.cbNamHoc.BackColor = System.Drawing.SystemColors.Window;
+            this.cbNamHoc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbNamHoc.FormattingEnabled = true;
+            this.cbNamHoc.Items.AddRange(new object[] {
+            "SV",
+            "GV"});
+            this.cbNamHoc.Location = new System.Drawing.Point(63, 19);
+            this.cbNamHoc.Name = "cbNamHoc";
+            this.cbNamHoc.Size = new System.Drawing.Size(121, 21);
+            this.cbNamHoc.TabIndex = 7;
+            this.cbNamHoc.SelectedValueChanged += new System.EventHandler(this.cbNamHoc_SelectedValueChanged);
+            // 
             // dGVSinhVien
             // 
             this.dGVSinhVien.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -199,50 +245,6 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(198, 20);
             this.textBox1.TabIndex = 10;
-            // 
-            // cbNamHoc
-            // 
-            this.cbNamHoc.BackColor = System.Drawing.SystemColors.Window;
-            this.cbNamHoc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbNamHoc.FormattingEnabled = true;
-            this.cbNamHoc.Items.AddRange(new object[] {
-            "SV",
-            "GV"});
-            this.cbNamHoc.Location = new System.Drawing.Point(63, 19);
-            this.cbNamHoc.Name = "cbNamHoc";
-            this.cbNamHoc.Size = new System.Drawing.Size(121, 21);
-            this.cbNamHoc.TabIndex = 7;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(10, 22);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(50, 13);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "Năm học";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(200, 22);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(41, 13);
-            this.label6.TabIndex = 10;
-            this.label6.Text = "Học kỳ";
-            // 
-            // cbHocKy
-            // 
-            this.cbHocKy.BackColor = System.Drawing.SystemColors.Window;
-            this.cbHocKy.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbHocKy.FormattingEnabled = true;
-            this.cbHocKy.Items.AddRange(new object[] {
-            "SV",
-            "GV"});
-            this.cbHocKy.Location = new System.Drawing.Point(253, 19);
-            this.cbHocKy.Name = "cbHocKy";
-            this.cbHocKy.Size = new System.Drawing.Size(121, 21);
-            this.cbHocKy.TabIndex = 9;
             // 
             // KetQuaHocPhanForm
             // 

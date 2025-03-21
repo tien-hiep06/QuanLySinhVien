@@ -19,7 +19,7 @@ namespace QLSinhVienHunre
         {
             maGV = maGiangVien;
             InitializeComponent();
-            LoadDataDgvSinhVien();
+            LoaData();
             AddBinding();
         }
 
@@ -42,10 +42,32 @@ namespace QLSinhVienHunre
             tbDiemSo.DataBindings.Clear();
             tbDiemChu.DataBindings.Clear();
         }
-        void LoadDataDgvSinhVien()
+
+
+        void LoaData()
         {
+            cbNamHoc.DataSource = db.LopHocPhan.Select(p => p.namHoc).Distinct().OrderByDescending(n => n).ToList();
+            cbHocKy.DataSource = db.LopHocPhan.Select(p => p.hocKy).Distinct().ToList();
+            LoadDGV();
+        }
+        void LoadDGV()
+        {
+            int namHoc, hocKy;
+
+            if (!int.TryParse(cbNamHoc.SelectedValue?.ToString(),out namHoc))
+            {
+                namHoc = (int)db.LopHocPhan.Max(p => p.namHoc);
+            }
+            
+            if (!int.TryParse(cbHocKy.SelectedValue?.ToString(),out hocKy))
+            {
+                hocKy = 1;
+            }
+
             var result = from c in db.ThamGiaLopHoc
                          where c.LopHocPhan.GiangVien.maGiangVien == maGV
+                         && c.LopHocPhan.namHoc == namHoc
+                         && c.LopHocPhan.hocKy == hocKy
                          select new
                          {
                              maLopHocPhan = c.LopHocPhan.maLopHocPhan,
@@ -97,7 +119,17 @@ namespace QLSinhVienHunre
         private void btedit_Click(object sender, EventArgs e)
         {
             EditData( tbMLHP.Text,tbMSV.Text);
-            LoadDataDgvSinhVien();
+            LoadDGV();
+        }
+
+        private void cbNamHoc_SelectedValueChanged(object sender, EventArgs e)
+        {
+            LoadDGV();
+        }
+
+        private void cbHocKy_SelectedValueChanged(object sender, EventArgs e)
+        {
+            LoadDGV();
         }
     }
 }

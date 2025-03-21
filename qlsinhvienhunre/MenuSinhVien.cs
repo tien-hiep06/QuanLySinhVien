@@ -87,6 +87,9 @@ namespace QLSinhVienHunre
             childForm.Show();
         }
 
+        #endregion
+        #region events
+
         private void Menu_FormClosing(object sender, FormClosingEventArgs e)
         {
             DialogResult result = MessageBox.Show("Bạn có muốn đóng ứng dụng không?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -137,9 +140,7 @@ namespace QLSinhVienHunre
                 }
             }
         }
-        #endregion
 
-        #region events
         private void btChildForm_Click(object sender, EventArgs e)
         {
             if (sender is Button btn)

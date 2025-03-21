@@ -133,7 +133,7 @@
             this.gbDanhSach.Controls.Add(this.dGVLopHP);
             this.gbDanhSach.Location = new System.Drawing.Point(271, 11);
             this.gbDanhSach.Name = "gbDanhSach";
-            this.gbDanhSach.Size = new System.Drawing.Size(678, 528);
+            this.gbDanhSach.Size = new System.Drawing.Size(531, 537);
             this.gbDanhSach.TabIndex = 9;
             this.gbDanhSach.TabStop = false;
             this.gbDanhSach.Text = "Danh Sách Lớp Học Phần";
@@ -147,7 +147,7 @@
             this.dGVLopHP.Location = new System.Drawing.Point(7, 19);
             this.dGVLopHP.Name = "dGVLopHP";
             this.dGVLopHP.RowHeadersWidth = 82;
-            this.dGVLopHP.Size = new System.Drawing.Size(666, 503);
+            this.dGVLopHP.Size = new System.Drawing.Size(519, 512);
             this.dGVLopHP.TabIndex = 0;
             this.dGVLopHP.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGVLopHP_CellClick);
             // 
@@ -179,7 +179,7 @@
             this.dTPNamHoc.CustomFormat = "yyyy";
             this.dTPNamHoc.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dTPNamHoc.Location = new System.Drawing.Point(109, 50);
-            this.dTPNamHoc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dTPNamHoc.Margin = new System.Windows.Forms.Padding(2);
             this.dTPNamHoc.Name = "dTPNamHoc";
             this.dTPNamHoc.Size = new System.Drawing.Size(69, 20);
             this.dTPNamHoc.TabIndex = 8;
@@ -330,12 +330,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(961, 546);
+            this.ClientSize = new System.Drawing.Size(814, 555);
             this.Controls.Add(this.gbChucNang);
             this.Controls.Add(this.gbDanhSach);
             this.Controls.Add(this.gbThongTin);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "LopHocPhanForm";
             this.Text = "LopHoc";
             this.gbChucNang.ResumeLayout(false);
