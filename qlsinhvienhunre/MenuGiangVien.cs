@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Reflection;
 using System.Text;
@@ -20,9 +21,10 @@ namespace QLSinhVienHunre
         {
             InitializeComponent();
             idGV = idGiangVien;
-
+            RoundPanel(pnMain);
+            RoundPanel(pnDangXuat);
             AssignButtonTag(btKetQuaHocPhan, new KetQuaHocPhanForm(idGV));
-
+            AssignButtonTag(btLopHoc, new LopGVForm(idGV));
         }
 
 
@@ -34,6 +36,24 @@ namespace QLSinhVienHunre
             button.Click += btChildForm_Click;
         }
 
+        private void RoundPanel(Panel panel)
+        {
+            // Kích thước của các góc tròn
+            int cornerRadius = 20;
+            // Tạo đường dẫn hình chữ nhật có các góc tròn
+            GraphicsPath roundRectPath = new GraphicsPath();
+            roundRectPath.StartFigure();
+            roundRectPath.AddArc(panel.ClientRectangle.Left, panel.ClientRectangle.Top, cornerRadius * 2, cornerRadius * 2, 180, 90); // Góc trên bên trái
+            roundRectPath.AddLine(panel.ClientRectangle.Left + cornerRadius, panel.ClientRectangle.Top, panel.ClientRectangle.Right - cornerRadius, panel.ClientRectangle.Top); // Đoạn ngang ở trên
+            roundRectPath.AddArc(panel.ClientRectangle.Right - cornerRadius * 2, panel.ClientRectangle.Top, cornerRadius * 2, cornerRadius * 2, 270, 90); // Góc trên bên phải
+            roundRectPath.AddLine(panel.ClientRectangle.Right, panel.ClientRectangle.Top + cornerRadius, panel.ClientRectangle.Right, panel.ClientRectangle.Bottom - cornerRadius); // Đoạn dọc bên phải
+            roundRectPath.AddArc(panel.ClientRectangle.Right - cornerRadius * 2, panel.ClientRectangle.Bottom - cornerRadius * 2, cornerRadius * 2, cornerRadius * 2, 0, 90); // Góc dưới bên phải
+            roundRectPath.AddLine(panel.ClientRectangle.Right - cornerRadius, panel.ClientRectangle.Bottom, panel.ClientRectangle.Left + cornerRadius, panel.ClientRectangle.Bottom); // Đoạn ngang ở dưới
+            roundRectPath.AddArc(panel.ClientRectangle.Left, panel.ClientRectangle.Bottom - cornerRadius * 2, cornerRadius * 2, cornerRadius * 2, 90, 90); // Góc dưới bên trái
+            roundRectPath.CloseFigure();
+            // Thiết lập vùng cắt cho panel
+            panel.Region = new Region(roundRectPath);
+        }
         private void OpenChildForm(Form childForm)
         {
             if (currentFormChild != null)
@@ -117,12 +137,24 @@ namespace QLSinhVienHunre
 
         private void MenuGiangVien_Resize(object sender, EventArgs e)
         {
-
+            RoundPanel(pnMain);
+             
         }
 
         private void iconMenu_Click(object sender, EventArgs e)
         {
             sidebartimer.Start();
+        }
+
+        private void btDangXuat_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Bạn có muốn đăng xuất không ?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                dangxuat = true;
+                Application.Restart();
+            }
         }
     }
 }

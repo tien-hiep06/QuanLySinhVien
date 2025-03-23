@@ -17,6 +17,7 @@ namespace QLSinhVienHunre
         {
             InitializeComponent();
             LoadData();
+            LoadYears();
         }
         #region methods
         void LoadData()
@@ -27,17 +28,21 @@ namespace QLSinhVienHunre
         }
         void LoadDGVLop()
         {
+            int namNhapHoc = selectComboboxValue(cbNamNhapHoc);
+
             var result = from c in db.Lop
-                         where c.NganhHoc.maNganhHoc == cbMaNganh.SelectedValue 
+                         where c.NganhHoc.maNganhHoc == cbMaNganh.SelectedValue
+                         && c.namNhapHoc == namNhapHoc
                          select new
                          {
                              maLop = c.maLop,
                              maNganhHoc = c.NganhHoc.maNganhHoc,
                              tenNganhHoc = c.NganhHoc.tenNganhHoc,
                              maGiangVien = c.GiangVien.maGiangVien,
-                             hotenGiangVien = c.GiangVien.hotenGiangVien
+                             hotenGiangVien = c.GiangVien.hotenGiangVien,
+                             namNhapHoc = c.namNhapHoc
                          };
-            dGVLop.DataSource = result.ToList();       
+            dGVLop.DataSource = result.ToList();
         }
         void LoadDGVGV()
         {
@@ -50,6 +55,26 @@ namespace QLSinhVienHunre
                          };
             dGVGiangVien.DataSource = result.ToList();
         }
+        private void LoadYears()
+        {
+            int startYear = 2000;
+            int currentYear = DateTime.Now.Year;
+
+            // Tạo danh sách object chứa Text và Value
+            var years = new List<object>();
+            for (int year = startYear; year <= currentYear; year++)
+            {
+                years.Add(new { Text = year.ToString(), Value = year });
+            }
+
+            cbNamNhapHoc.DataSource = years; // Gán danh sách vào ComboBox
+            cbNamNhapHoc.DisplayMember = "Text";  // Hiển thị năm
+            cbNamNhapHoc.ValueMember = "Value";  // Giá trị thực sự
+
+            cbNamNhapHoc.SelectedValue = currentYear; // Đặt giá trị mặc định là năm hiện tại
+
+        }
+
         void AddBinding(object dGV)
         {
             if (dGV == dGVLop.DataSource)
@@ -64,25 +89,26 @@ namespace QLSinhVienHunre
             tbMaGiangVien.DataBindings.Clear();
         }
 
-        int SelectIdNganh()
+        int selectComboboxValue(ComboBox cb)
         {
-            if(cbMaNganh.SelectedValue != null)
+            int value;
+            if (!int.TryParse(cb.SelectedValue?.ToString(), out value))
             {
-                int result = db.NganhHoc.Where(p => p.maNganhHoc == cbMaNganh.SelectedValue).Select(p => p.idNganhHoc).SingleOrDefault();
-                return result;
+                value = 0; // Giá trị mặc định nếu không lấy được năm
             }
-            else { return -1; }
+            return value;
         }
 
-        int SelectIdGiangVien()
+        NganhHoc SelectNganhHoc(String maNganh)
         {
-            if(tbMaGiangVien.Text != null)
-            {
-                int result = db.GiangVien.Where(p => p.maGiangVien == tbMaGiangVien.Text).Select(p => p.idGiangVien).SingleOrDefault();
-                return result;
-            }
-            else { return -1; }
+            NganhHoc result = db.NganhHoc.Where(p => p.maNganhHoc == maNganh).SingleOrDefault();
+            return result;
+        }
 
+        GiangVien SelectGiangVien(String maGiangVien)
+        {
+            GiangVien result = db.GiangVien.Where(p => p.maGiangVien == maGiangVien).SingleOrDefault();
+            return result;
         }
 
         Lop SelectLop(String maLop)
@@ -91,43 +117,46 @@ namespace QLSinhVienHunre
             return result;
 
         }
-        void AddData()
-        {
-                Lop lop = new Lop()
-                {
-                    idNganhHoc = SelectIdNganh(),
-                    idGiangVien = SelectIdGiangVien()
-                };
-                db.Lop.Add(lop);
-                db.SaveChanges();
 
-                Lop lopUpdate = db.Lop.Find(lop.idLop);
-                lopUpdate.maLop = cbMaNganh.SelectedValue.ToString() + lopUpdate.idLop;
-                db.SaveChanges();
-                MessageBox.Show("Thêm lớp thành công.");
-        }
-        void EditData(String maLop)
+        void AddData(String maGiangVien, String maNganhHoc)
         {
-                Lop lop = db.Lop.Find(SelectLop(maLop).idLop);
-                lop.idGiangVien = SelectIdGiangVien();
-                lop.idNganhHoc = SelectIdNganh();
-                db.SaveChanges();
-                MessageBox.Show("Sửa thông tin lớp thành công.");
+            int count = db.Lop.Where(p => p.NganhHoc.maNganhHoc == maNganhHoc && p.namNhapHoc == selectComboboxValue(cbNamNhapHoc)).Count() + 1;
+            Lop lop = new Lop()
+            {
+               idNganhHoc = SelectNganhHoc(maNganhHoc).idNganhHoc,
+               idGiangVien = SelectGiangVien(maGiangVien).idGiangVien
+            };
+            db.Lop.Add(lop);
+            db.SaveChanges();
+
+            Lop lopUpdate = db.Lop.Find(lop.idLop);
+            lopUpdate.maLop = cbMaNganh.SelectedValue.ToString() + count;
+            db.SaveChanges();
+            MessageBox.Show("Thêm lớp thành công.");
+        }
+
+        void EditData(String maLop, String maGiangVien, String maNganhHoc)
+        {
+            Lop lop = db.Lop.Find(SelectLop(maLop).idLop);
+            lop.idGiangVien = SelectGiangVien(maGiangVien).idGiangVien;
+            lop.idNganhHoc = SelectNganhHoc(maNganhHoc).idNganhHoc;   
+            db.SaveChanges();
+            MessageBox.Show("Sửa thông tin lớp thành công.");
         }
 
         void DeleteData(String maLop)
         {
-                if (!db.SinhVien.Any(p => p.Lop.maLop == maLop))
-                {
-                    Lop lopDel = db.Lop.Find(SelectLop(maLop).idLop);
-                    db.Lop.Remove(lopDel);
-                    db.SaveChanges();
-                    MessageBox.Show("Xóa lớp thành công.");
-                }
-                else
-                {
-                    MessageBox.Show("Không thể xóa lớp có sinh viên");
-                }
+           if (!db.SinhVien.Any(p => p.Lop.maLop == maLop))
+           {
+                Lop lopDel = db.Lop.Find(SelectLop(maLop).idLop);
+                db.Lop.Remove(lopDel);
+                db.SaveChanges();
+                MessageBox.Show("Xóa lớp thành công.");
+           }
+           else
+           {
+                MessageBox.Show("Không thể xóa lớp có sinh viên");
+           }
         }
 
         void ResetData()
@@ -150,7 +179,7 @@ namespace QLSinhVienHunre
         {
             if (CheckNotNull())
             {
-                AddData();
+                AddData(tbMaGiangVien.Text, cbMaNganh.SelectedValue.ToString());
                 LoadDGVLop();
                 ClearBinding();
                 ResetData();
@@ -164,7 +193,7 @@ namespace QLSinhVienHunre
         {
             if (!string.IsNullOrEmpty(tbMaLop.Text))
             {
-                EditData(tbMaLop.Text);
+                EditData(tbMaLop.Text, tbMaGiangVien.Text, cbMaNganh.SelectedValue.ToString());
                 LoadDGVLop();
                 ClearBinding();
                 ResetData();
@@ -211,6 +240,11 @@ namespace QLSinhVienHunre
         {   
             ClearBinding();
             AddBinding(dGVLop.DataSource);
+        }
+
+        private void cbNamNhapHoc_SelectedValueChanged(object sender, EventArgs e)
+        {
+            LoadDGVLop();
         }
         #endregion
     }

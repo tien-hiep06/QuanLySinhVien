@@ -29,6 +29,7 @@
     <Property Name="idLop" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="idNganhHoc" Type="Int32" />
     <Property Name="idGiangVien" Type="Int32" />
+    <Property Name="namNhapHoc" Type="Int32" />
     <NavigationProperty Name="GiangVien" Relationship="Self.Lop_GiangVien_FK" FromRole="Lop" ToRole="GiangVien" />
     <NavigationProperty Name="NganhHoc" Relationship="Self.Lop_NganhHoc_FK" FromRole="Lop" ToRole="NganhHoc" />
     <NavigationProperty Name="SinhVien" Relationship="Self.SinhVien_Lop_FK" FromRole="Lop" ToRole="SinhVien" />
@@ -113,16 +114,6 @@
     <NavigationProperty Name="Lop" Relationship="Self.SinhVien_Lop_FK" FromRole="SinhVien" ToRole="Lop" />
     <NavigationProperty Name="NguoiDung" Relationship="Self.NguoiDung_SinhVien_FK" FromRole="SinhVien" ToRole="NguoiDung" />
     <NavigationProperty Name="ThamGiaLopHoc" Relationship="Self.ThamGiaLopHoc_SinhVien_FK" FromRole="SinhVien" ToRole="ThamGiaLopHoc" />
-  </EntityType>
-  <EntityType Name="sysdiagrams">
-    <Key>
-      <PropertyRef Name="diagram_id" />
-    </Key>
-    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="principal_id" Type="Int32" Nullable="false" />
-    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="version" Type="Int32" />
-    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
   </EntityType>
   <EntityType Name="ThamGiaLopHoc">
     <Key>
@@ -291,7 +282,6 @@
     <EntitySet Name="NguoiDung" EntityType="Self.NguoiDung" />
     <EntitySet Name="PhanChiaMonHoc" EntityType="Self.PhanChiaMonHoc" />
     <EntitySet Name="SinhVien" EntityType="Self.SinhVien" />
-    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
     <EntitySet Name="ThamGiaLopHoc" EntityType="Self.ThamGiaLopHoc" />
     <AssociationSet Name="Lop_GiangVien_FK" Association="Self.Lop_GiangVien_FK">
       <End Role="GiangVien" EntitySet="GiangVien" />
@@ -341,46 +331,5 @@
       <End Role="SinhVien" EntitySet="SinhVien" />
       <End Role="ThamGiaLopHoc" EntitySet="ThamGiaLopHoc" />
     </AssociationSet>
-    <FunctionImport Name="sp_alterdiagram">
-      <Parameter Name="diagramname" Mode="In" Type="String" />
-      <Parameter Name="owner_id" Mode="In" Type="Int32" />
-      <Parameter Name="version" Mode="In" Type="Int32" />
-      <Parameter Name="definition" Mode="In" Type="Binary" />
-    </FunctionImport>
-    <FunctionImport Name="sp_creatediagram">
-      <Parameter Name="diagramname" Mode="In" Type="String" />
-      <Parameter Name="owner_id" Mode="In" Type="Int32" />
-      <Parameter Name="version" Mode="In" Type="Int32" />
-      <Parameter Name="definition" Mode="In" Type="Binary" />
-    </FunctionImport>
-    <FunctionImport Name="sp_dropdiagram">
-      <Parameter Name="diagramname" Mode="In" Type="String" />
-      <Parameter Name="owner_id" Mode="In" Type="Int32" />
-    </FunctionImport>
-    <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(qlsinhvienhunreModel.sp_helpdiagramdefinition_Result)">
-      <Parameter Name="diagramname" Mode="In" Type="String" />
-      <Parameter Name="owner_id" Mode="In" Type="Int32" />
-    </FunctionImport>
-    <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(qlsinhvienhunreModel.sp_helpdiagrams_Result)">
-      <Parameter Name="diagramname" Mode="In" Type="String" />
-      <Parameter Name="owner_id" Mode="In" Type="Int32" />
-    </FunctionImport>
-    <FunctionImport Name="sp_renamediagram">
-      <Parameter Name="diagramname" Mode="In" Type="String" />
-      <Parameter Name="owner_id" Mode="In" Type="Int32" />
-      <Parameter Name="new_diagramname" Mode="In" Type="String" />
-    </FunctionImport>
-    <FunctionImport Name="sp_upgraddiagrams" />
   </EntityContainer>
-  <ComplexType Name="sp_helpdiagramdefinition_Result">
-    <Property Type="Int32" Name="version" Nullable="true" />
-    <Property Type="Binary" Name="definition" Nullable="true" />
-  </ComplexType>
-  <ComplexType Name="sp_helpdiagrams_Result">
-    <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
-    <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
-    <Property Type="Int32" Name="ID" Nullable="false" />
-    <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
-    <Property Type="Int32" Name="OwnerID" Nullable="false" />
-  </ComplexType>
 </Schema>

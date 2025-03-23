@@ -75,6 +75,7 @@
             this.btDangXuat.TabIndex = 2;
             this.btDangXuat.Text = "Đăng xuất";
             this.btDangXuat.UseVisualStyleBackColor = false;
+            this.btDangXuat.Click += new System.EventHandler(this.btDangXuat_Click);
             // 
             // pnMenu
             // 
@@ -125,7 +126,7 @@
             this.btTaiKhoan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(236)))), ((int)(((byte)(250)))));
             this.btTaiKhoan.Image = global::QLSinhVienHunre.Properties.Resources.account;
             this.btTaiKhoan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btTaiKhoan.Location = new System.Drawing.Point(-3, 0);
+            this.btTaiKhoan.Location = new System.Drawing.Point(-1, 0);
             this.btTaiKhoan.Margin = new System.Windows.Forms.Padding(2);
             this.btTaiKhoan.Name = "btTaiKhoan";
             this.btTaiKhoan.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
@@ -145,7 +146,7 @@
             this.btLopHoc.ForeColor = System.Drawing.Color.Transparent;
             this.btLopHoc.Image = global::QLSinhVienHunre.Properties.Resources._class;
             this.btLopHoc.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btLopHoc.Location = new System.Drawing.Point(-3, 0);
+            this.btLopHoc.Location = new System.Drawing.Point(-1, 0);
             this.btLopHoc.Margin = new System.Windows.Forms.Padding(2);
             this.btLopHoc.Name = "btLopHoc";
             this.btLopHoc.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
@@ -173,7 +174,7 @@
             this.btKetQuaHocPhan.ForeColor = System.Drawing.Color.Transparent;
             this.btKetQuaHocPhan.Image = global::QLSinhVienHunre.Properties.Resources.globe;
             this.btKetQuaHocPhan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btKetQuaHocPhan.Location = new System.Drawing.Point(-3, 0);
+            this.btKetQuaHocPhan.Location = new System.Drawing.Point(0, 0);
             this.btKetQuaHocPhan.Margin = new System.Windows.Forms.Padding(2);
             this.btKetQuaHocPhan.Name = "btKetQuaHocPhan";
             this.btKetQuaHocPhan.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);

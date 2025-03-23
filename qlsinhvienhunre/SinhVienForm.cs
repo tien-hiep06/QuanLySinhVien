@@ -28,15 +28,11 @@ namespace QLSinhVienHunre
         }
         void LoadDGV()
         {
-            int selectedYear;
-            if (!int.TryParse(cbNamNhapHoc.SelectedValue?.ToString(), out selectedYear))
-            {
-                selectedYear = DateTime.Now.Year; // Giá trị mặc định nếu không lấy được năm
-            }
+            int namNhapHoc = selectComboboxValue(cbNamNhapHoc);
             // Lấy dữ liệu từ database
 
             var result = from c in db.SinhVien
-                         where c.idSinhVien > 0 && c.namNhapHoc == selectedYear
+                         where c.idSinhVien > 0 && c.namNhapHoc == namNhapHoc
                          select new
                          {
                              maSinhVien = c.maSinhVien,
@@ -102,6 +98,16 @@ namespace QLSinhVienHunre
             tbMaSV.DataBindings.Clear();
             tbHoTen.DataBindings.Clear();
             dTPNgaySinh.DataBindings.Clear();
+        }
+        
+        int selectComboboxValue(ComboBox cb)
+        {
+            int value;
+            if (!int.TryParse(cb.SelectedValue?.ToString(), out value))
+            {
+                value = 0;
+            }
+            return value;
         }
 
         SinhVien SelectData(String maSinhVien)

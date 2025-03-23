@@ -46,6 +46,8 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.dGVGiangVien = new System.Windows.Forms.DataGridView();
+            this.cbNamNhapHoc = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -56,13 +58,15 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.cbNamNhapHoc);
+            this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.tbMaGiangVien);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.tbMaLop);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(193, 85);
+            this.groupBox1.Size = new System.Drawing.Size(193, 108);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thòng tin";
@@ -78,7 +82,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 61);
+            this.label3.Location = new System.Drawing.Point(6, 57);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(74, 13);
             this.label3.TabIndex = 4;
@@ -125,9 +129,9 @@
             this.groupBox2.Controls.Add(this.btDelete);
             this.groupBox2.Controls.Add(this.btEdit);
             this.groupBox2.Controls.Add(this.btAdd);
-            this.groupBox2.Location = new System.Drawing.Point(12, 103);
+            this.groupBox2.Location = new System.Drawing.Point(12, 123);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(200, 81);
+            this.groupBox2.Size = new System.Drawing.Size(193, 81);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Chức năng";
@@ -225,9 +229,9 @@
             this.groupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.groupBox4.Controls.Add(this.dGVGiangVien);
-            this.groupBox4.Location = new System.Drawing.Point(12, 190);
+            this.groupBox4.Location = new System.Drawing.Point(12, 210);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(193, 352);
+            this.groupBox4.Size = new System.Drawing.Size(193, 332);
             this.groupBox4.TabIndex = 3;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Danh sách giảng viên";
@@ -241,9 +245,29 @@
             this.dGVGiangVien.Location = new System.Drawing.Point(7, 20);
             this.dGVGiangVien.Name = "dGVGiangVien";
             this.dGVGiangVien.RowHeadersWidth = 51;
-            this.dGVGiangVien.Size = new System.Drawing.Size(180, 326);
+            this.dGVGiangVien.Size = new System.Drawing.Size(180, 306);
             this.dGVGiangVien.TabIndex = 0;
             this.dGVGiangVien.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGVGiangVien_CellClick);
+            // 
+            // cbNamNhapHoc
+            // 
+            this.cbNamNhapHoc.DropDownHeight = 80;
+            this.cbNamNhapHoc.FormattingEnabled = true;
+            this.cbNamNhapHoc.IntegralHeight = false;
+            this.cbNamNhapHoc.Location = new System.Drawing.Point(88, 80);
+            this.cbNamNhapHoc.Name = "cbNamNhapHoc";
+            this.cbNamNhapHoc.Size = new System.Drawing.Size(99, 21);
+            this.cbNamNhapHoc.TabIndex = 14;
+            this.cbNamNhapHoc.SelectedValueChanged += new System.EventHandler(this.cbNamNhapHoc_SelectedValueChanged);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(6, 83);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(77, 13);
+            this.label5.TabIndex = 13;
+            this.label5.Text = "Năm nhập học";
             // 
             // LopForm
             // 
@@ -289,5 +313,7 @@
         private System.Windows.Forms.DataGridView dGVGiangVien;
         private System.Windows.Forms.DataGridViewTextBoxColumn maNganhHoc;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ComboBox cbNamNhapHoc;
+        private System.Windows.Forms.Label label5;
     }
 }

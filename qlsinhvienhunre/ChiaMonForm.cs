@@ -62,6 +62,18 @@ namespace QLSinhVienHunre
             tbMaMon.DataBindings.Clear();
         }
 
+        NganhHoc SelectNganh(String maNganh)
+        {
+            NganhHoc nganhHoc = db.NganhHoc.Where(p => p.maNganhHoc == maNganh).SingleOrDefault();
+            return nganhHoc;
+        }
+
+        MonHoc SelectMon(String maMonHoc)
+        {
+            MonHoc monHoc = db.MonHoc.Where(p => p.maMonHoc == maMonHoc).SingleOrDefault();
+            return monHoc;
+        }
+
         void AddData(String maMonHoc, String maNganhHoc)
         {
             int idmh = SelectMon(maMonHoc).idMonHoc;
@@ -98,25 +110,10 @@ namespace QLSinhVienHunre
             }
         }
 
-        NganhHoc SelectNganh (String maNganh)
-        {
-            NganhHoc nganhHoc = db.NganhHoc.Where(p => p.maNganhHoc == maNganh).SingleOrDefault();
-            return nganhHoc;
-        }
-
-        MonHoc SelectMon(String maMonHoc)
-        {
-            MonHoc monHoc = db.MonHoc.Where(p => p.maMonHoc == maMonHoc).SingleOrDefault();
-            return monHoc;
-        }
 
         void UpdateData()
         {
-            if (!db.PhanChiaMonHoc.Any(p => p.NganhHoc.maNganhHoc == cbMaNganh.SelectedValue))
-            {
-                MessageBox.Show("Ngành học này chưa có môn");
-            }
-            else
+            if (db.PhanChiaMonHoc.Any(p => p.NganhHoc.maNganhHoc == cbMaNganh.SelectedValue))
             {
                 int sum = 0;
                 int idnh = SelectNganh(cbMaNganh.SelectedValue.ToString()).idNganhHoc;
@@ -128,6 +125,10 @@ namespace QLSinhVienHunre
                 nganhHoc.soTinChi = sum;
                 db.SaveChanges();
                 MessageBox.Show("Đã cập nhật số tín chỉ cảu ngành" + cbMaNganh.SelectedValue.ToString());
+            }
+            else
+            {
+                MessageBox.Show("Ngành học này chưa có môn");
             }   
         } 
         #endregion
@@ -136,6 +137,18 @@ namespace QLSinhVienHunre
         private void cbMaNganh_SelectedValueChanged(object sender, EventArgs e)
         {
             LoadDGV();
+        }
+
+        private void dGVMonHoc_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            ClearBinding();
+            AddBinding(dGVMonHoc.DataSource);
+        }
+
+        private void dGVNganhHoc_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            ClearBinding();
+            AddBinding(dGVNganhHoc.DataSource);
         }
 
         private void btThem_Click(object sender, EventArgs e)
@@ -150,18 +163,6 @@ namespace QLSinhVienHunre
                 MessageBox.Show("Vui lòng chọn môn để thêm!");
             }
 
-        }
-
-        private void dGVMonHoc_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            ClearBinding();
-            AddBinding(dGVMonHoc.DataSource);
-        }
-
-        private void dGVNganhHoc_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            ClearBinding();
-            AddBinding(dGVNganhHoc.DataSource);
         }
 
         private void buttonXoa_Click(object sender, EventArgs e)

@@ -207,3 +207,4 @@ D:\Workspace\KhoaLuanTotNghiep\QuanLySinhVien\qlsinhvienhunre\obj\Debug\QLSinhVi
 D:\Workspace\KhoaLuanTotNghiep\QuanLySinhVien\qlsinhvienhunre\obj\Debug\QLSinhVienHunre.pdb
 D:\Workspace\KhoaLuanTotNghiep\QuanLySinhVien\qlsinhvienhunre\obj\Debug\QLSinhVienHunre.DemoForm.resources
 D:\Workspace\KhoaLuanTotNghiep\QuanLySinhVien\qlsinhvienhunre\obj\Debug\QLSinhVienHunre.MenuGiangVien.resources
+D:\Workspace\KhoaLuanTotNghiep\QuanLySinhVien\qlsinhvienhunre\obj\Debug\QLSinhVienHunre.LopGVForm.resources

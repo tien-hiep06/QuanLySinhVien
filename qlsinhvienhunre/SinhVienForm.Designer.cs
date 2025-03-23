@@ -77,7 +77,9 @@
             // 
             // cbNamNhapHoc
             // 
+            this.cbNamNhapHoc.DropDownHeight = 60;
             this.cbNamNhapHoc.FormattingEnabled = true;
+            this.cbNamNhapHoc.IntegralHeight = false;
             this.cbNamNhapHoc.Location = new System.Drawing.Point(113, 133);
             this.cbNamNhapHoc.Name = "cbNamNhapHoc";
             this.cbNamNhapHoc.Size = new System.Drawing.Size(131, 21);

@@ -24,6 +24,7 @@ namespace QLSinhVienHunre
         public int idLop { get; set; }
         public Nullable<int> idNganhHoc { get; set; }
         public Nullable<int> idGiangVien { get; set; }
+        public Nullable<int> namNhapHoc { get; set; }
     
         public virtual GiangVien GiangVien { get; set; }
         public virtual NganhHoc NganhHoc { get; set; }
